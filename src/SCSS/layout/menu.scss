@@ -1,0 +1,114 @@
+@use '../abstract/variables' as *;
+@use '../abstract/animations' as *;
+.menu {
+  @include flex(row);
+  justify-content: space-between;
+  padding: 2rem 0rem;
+
+  &__list {
+    z-index: 100;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    height: 80vh;
+    width: 90vw;
+
+    @include flex(column);
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 30px;
+
+    transform: translateX(100vh);
+    transition: transform 1s;
+  }
+
+  &__list--fade-in {
+    transform: translateX(0);
+    transition: transform 1s;
+  }
+
+  &__item {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  &__link {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $font-color;
+    padding: 0.5rem 0;
+    border-bottom: $font-color 1px solid;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media (min-width: 950px) {
+    &__list {
+      background: 0;
+      flex-direction: row;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      transform: translateX(0);
+      transition: transform 1s;
+    }
+    &__link {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+.burger {
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s;
+
+  &__lines {
+    position: relative;
+    border-bottom: 2px red solid;
+    width: 40px;
+    height: 5px;
+    transition: all 2s;
+    // padding-top: 10px;
+
+    // &::after {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   content: '';
+    //   width: 40px;
+    //   height: 5px;
+    //   padding-top: 10px;
+    // }
+  }
+}
+
+.burger__line--clicked {
+  transition: all 1s;
+  //   margin-top: 30px;
+}
+
+.burger__line--clicked > :first-child {
+  //   position: absolute;
+  transform: rotate(130deg);
+  transition: all 1s;
+}
+.burger__line--clicked > :nth-child(2) {
+  opacity: 0;
+  //   position: absolute;
+  transform: rotate(130deg);
+  transition: all 1s;
+}
+
+.burger__line--clicked > :last-child {
+  transition: all 1s;
+  //   position: absolute;
+  transition: all 1s;
+  transform: rotate(-130deg);
+}

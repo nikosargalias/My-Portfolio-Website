@@ -1,0 +1,9 @@
+@use '../abstract/variables' as *;
+
+.footer {
+  .footer__container {
+    @include container;
+    @include flex(row);
+    justify-content: space-between;
+  }
+}

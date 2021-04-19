@@ -1,0 +1,6 @@
+@use '../abstract/variables' as *;
+.header {
+  &__container {
+    @include container;
+  }
+}

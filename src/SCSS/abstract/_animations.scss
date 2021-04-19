@@ -1,0 +1,33 @@
+@keyframes snakeLine {
+  0% {
+    transform: translateX(-100vw);
+  }
+  33% {
+    transform: translateX(40%) translateY(0%) scaleX(0.05);
+  }
+  65% {
+    transform: translateX(40%) translateY(0%) rotate(180deg) scaleX(0.05);
+  }
+  80% {
+    transform: translateX(0%) translateY(0%) scaleX(0.05) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%) rotate(180deg);
+    border-radius: 30px;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    color: red;
+    transform: translateX(-100%) rotate3d(1, 1, 1, 0deg);
+  }
+  // 50% {
+  //   color: orange;
+  //   transform: translateX(-50%) rotate3d(1, 1, 1, 180deg);
+  // }
+  100% {
+    color: white;
+    transform: translateX(0%) rotate3d(1, 1, 1, 360deg);
+  }
+}
