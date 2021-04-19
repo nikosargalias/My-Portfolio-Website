@@ -1,17 +1,17 @@
 /* eslint-disable no-undef */
-const path = require("path");
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common.js");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
   optimization: {
     splitChunks: {
-      chunks: "all",
+      chunks: 'all',
     },
   },
-  mode: "production",
+  mode: 'production',
   module: {
     rules: [
       {
@@ -20,11 +20,12 @@ module.exports = merge(common, {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: path.resolve(__dirname, "dist", "assets", "imgs"),
+              publicPath: path.resolve(__dirname, 'dist', 'assets', 'imgs'),
             },
           },
-          "css-loader",
-          "sass-loader",
+          'css-loader',
+          'sass-loader',
+          'glob-import-loader',
         ],
       },
       {
@@ -33,18 +34,18 @@ module.exports = merge(common, {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: path.resolve(__dirname, "dist", "assets", "imgs"),
+              publicPath: path.resolve(__dirname, 'dist', 'assets', 'imgs'),
             },
           },
-          "css-loader",
+          'css-loader',
         ],
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles/[name].[contenthash].css",
-      chunkFilename: "[id].[contenthash].css",
+      filename: 'styles/[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css',
     }),
     new CssMinimizerPlugin(),
   ],
