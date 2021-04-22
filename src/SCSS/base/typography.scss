@@ -1,5 +1,14 @@
 @use '../abstract/forwards' as *;
 
+%rainbow-text {
+  background: $rainbow-color;
+  color: transparent;
+  background-clip: text;
+  animation: rainbow infinite 3s;
+  animation-timing-function: steps(5);
+  background-size: 400% 100%;
+}
+
 .title {
   letter-spacing: 2px;
   font-size: 3rem;
@@ -44,14 +53,5 @@ li {
 
 em {
   font-style: normal;
-  background: $rainbow-color;
-  color: transparent;
-  background-clip: text;
-  // animation: rainbow infinite 3s;
-  animation-timing-function: steps(5);
-  background-size: 400% 100%;
-
-  &:hover {
-    box-shadow: violet 100px 100px 100px;
-  }
+  @extend %rainbow-text;
 }

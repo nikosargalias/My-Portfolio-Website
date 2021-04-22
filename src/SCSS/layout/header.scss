@@ -26,7 +26,6 @@
   }
 
   &__list {
-    margin: auto;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -50,8 +49,10 @@
     color: $font-color;
     font-size: 2rem;
     text-transform: uppercase;
-    border-bottom: solid $font-color 1px;
+    // border-bottom: solid $font-color 1px;
     margin-bottom: 1rem;
+    @extend %rainbow-text;
+    animation-duration: 5s;
   }
 
   &__burger-btn {
@@ -100,7 +101,8 @@
       transform: translateX(0);
     }
     &__link {
-      margin-left: 1rem;
+      margin-left: 2rem;
+      font-size: 1.5rem;
     }
 
     &__burger-btn {

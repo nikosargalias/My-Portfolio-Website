@@ -22,7 +22,6 @@ function slideInMenu() {
   const { navMenu, listItems } = publicEls;
   navMenu.classList.toggle('menu__open');
   listItems.forEach((item, i) => {
-    item.style = `transition-delay: 0.${i + i}s`;
     item.classList.toggle('menu__open');
   });
 }
