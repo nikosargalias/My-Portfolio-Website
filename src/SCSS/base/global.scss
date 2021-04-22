@@ -1,12 +1,14 @@
-@use '../abstract/variables' as *;
+@use '../abstract/forwards' as *;
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -14,5 +16,6 @@ html {
 
 body {
   color: $font-color;
-  font-family: 'Ubuntu';
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }

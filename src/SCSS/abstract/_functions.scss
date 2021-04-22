@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+@function invertColor($font-color) {
+  @if (lightness($font-color) > 50) {
+    @return darken($font-color, 100%);
+  } @else {
+    @return $font-color;
+  }
+}

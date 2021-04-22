@@ -1,9 +1,18 @@
-@use '../abstract/variables' as *;
+@use '../abstract/forwards' as *;
 
 .footer {
+  background: $dark-background;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+
   .footer__container {
     @include container;
     @include flex(row);
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
   }
 }

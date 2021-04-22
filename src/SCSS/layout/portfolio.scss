@@ -1,0 +1,80 @@
+@use '../abstract/forwards' as *;
+
+.portfolio-section {
+  @extend %section;
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__title,
+  &__subtitle {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__em-text {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__container {
+    padding: 1rem;
+    background: $dark-background;
+    border-radius: 30px;
+    @include container;
+    @include flex(column);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-top: 10px solid rgba(255, 0, 0, 0.427);
+      transform: translateX(-100vw);
+      animation: snakeLine 4s linear;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/imgs/Screenshot\ 2021-04-21\ at\ 01.44.04.png');
+    opacity: 0.5;
+    background-position: right;
+    background-repeat: 1;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    //the image goes behind the parent element, because the parent element does not have a stacking context.
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/imgs/tommy-van-kessel-ObQ4fncHRHg-unsplash.jpg');
+    background-position: right;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -2;
+  }
+}

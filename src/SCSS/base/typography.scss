@@ -1,0 +1,57 @@
+@use '../abstract/forwards' as *;
+
+.title {
+  letter-spacing: 2px;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  letter-spacing: 8px;
+}
+
+.body-text {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.em-text {
+  font-size: 1.3rem;
+  font-style: italic;
+  letter-spacing: 4px;
+}
+
+h1 {
+  @extend .title;
+  // animation: retro-line infinite 3s;
+  // animation-timing-function: steps(5);
+}
+
+h2 {
+  @extend .subtitle;
+}
+
+p {
+  @extend .body-text;
+}
+
+a,
+li {
+  @extend .body-text;
+}
+
+em {
+  font-style: normal;
+  background: $rainbow-color;
+  color: transparent;
+  background-clip: text;
+  // animation: rainbow infinite 3s;
+  animation-timing-function: steps(5);
+  background-size: 400% 100%;
+
+  &:hover {
+    box-shadow: violet 100px 100px 100px;
+  }
+}

@@ -1,25 +1,9 @@
 .page {
-  &--hero {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    background-image: url('assets/imgs/Hero-pic.png');
-    background-position: center;
-    background-size: cover;
-    z-index: 0;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.558);
-      z-index: -1;
-    }
-  }
+  background-image: url('assets/imgs/Screenshot\ 2021-04-21\ at\ 01.44.04.png');
+  background-position: right;
+  background-repeat: 1;
+  background-size: cover;
+  background-attachment: fixed;
 
   &__main {
     align-self: center;

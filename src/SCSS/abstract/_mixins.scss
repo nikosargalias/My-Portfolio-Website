@@ -1,0 +1,19 @@
+@use './variables' as *;
+
+@mixin media($device) {
+  $size: map-get($breakpoint, $device);
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin container() {
+  width: 1100px;
+  max-width: 90vw;
+  margin: auto;
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}

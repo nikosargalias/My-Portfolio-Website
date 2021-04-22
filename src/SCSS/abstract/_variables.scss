@@ -1,19 +1,24 @@
-@mixin container() {
-  width: 1100px;
-  max-width: 90vw;
-  margin: auto;
-}
+@use 'sass:map';
 
-@mixin flex($direction) {
-  display: flex;
-  flex-direction: $direction;
-}
-
-@function invertColor($font-color) {
-  @if (lightness($font-color) > 50) {
-    @return darken($font-color, 100%);
-  }
-}
+$breakpoint: (
+  'mobile': 500px,
+  'tablet': 768px,
+  'desktop': 950px,
+);
 
 $font-color: rgba(255, 255, 255, 0.8);
-$dark-background: rgba(000, 000, 000, 0.6);
+$accent-color: rgba(51, 164, 240, 0.8);
+$rainbow-color: linear-gradient(
+  to right,
+  #ff6666,
+  #0099ff,
+  #00ff00,
+  #ff3399,
+  #6666ff
+);
+
+$dark-background: linear-gradient(
+  to right,
+  rgba(0, 0, 0, 0.6),
+  rgba(000, 000, 000, 0.3)
+);

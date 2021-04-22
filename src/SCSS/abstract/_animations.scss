@@ -31,3 +31,27 @@
     transform: translateX(0%) rotate3d(1, 1, 1, 360deg);
   }
 }
+
+@keyframes rainbow {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes retro-line {
+  0% {
+    box-shadow: turquoise -10px 10px 0px 0px;
+  }
+  50% {
+    box-shadow: #00ff00 -5px 5px 0px 0px;
+  }
+  100% {
+    box-shadow: #6666ff 0px 0px 0px 0px;
+  }
+}
