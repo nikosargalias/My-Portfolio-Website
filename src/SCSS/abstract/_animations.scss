@@ -55,3 +55,18 @@
     box-shadow: #6666ff 0px 0px 0px 0px;
   }
 }
+
+@keyframes reveal {
+  0% {
+    background: turquoise;
+    transform: translateX(100%) scaleX(1%);
+  }
+  50% {
+    background: #00ff00;
+    transform: translateX(-50%) scaleX(1%);
+  }
+  100% {
+    background: #6666ff;
+    transform: translateX(-50%) translateY(50%) scaleX(5%) scaleY(1%);
+  }
+}

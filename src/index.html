@@ -31,23 +31,74 @@
         </nav>
       </div>
     </header>
+
     <main class="page__main">
-      <section class="hero-section scroll-snap">
-        <div class="hero-section__container">
-          <p class="hero-section__subtitle subtitle">
-            Web Developer - Programmer - Designer
-          </p>
-          <h1 class="hero-section__title title">
-            <em>Nikos</em> <em>Argalias</em>
-          </h1>
-          <p class="hero-section__em-text em-text">
-            Clean code evangelist and study addict
-          </p>
+      <div id="hero" class="hero scroll-snap">
+        <div class="hero__parallax">
+          <img
+            id="para-img-1"
+            class="hero__parallax-img-1"
+            src="./assets/parallax/1.png"
+            alt=""
+          />
+          <img
+            id="para-img-2"
+            class="hero__parallax-img-2"
+            src="./assets/parallax/2.png"
+            alt=""
+          />
+          <img
+            id="para-img-3"
+            class="hero__parallax-img-3"
+            src="./assets/parallax/3.png"
+            alt=""
+          />
         </div>
-      </section>
+        <section id="hero__content" class="hero__content">
+          <div class="hero__container">
+            <p class="hero__subtitle subtitle">
+              Web Developer - Programmer - Designer
+            </p>
+            <h1 class="hero__title title">
+              <em>Nikos</em> <em>Argalias</em>
+              <div class="text-reveal"></div>
+            </h1>
+            <p class="hero__em-text em-text">
+              Clean code evangelist and study addict
+            </p>
+          </div>
+        </section>
+        <a href="" id="hero__btn" class="btn hero__btn"><em>See My Work</em></a>
+      </div>
 
       <section class="portfolio-section scroll-snap">
-        <div class="portfolio-section__container">
+        <div class="portfolio__parallax">
+          <img
+            id="storm-trooper-one"
+            class="portfolio__parallax-img-1"
+            src="./assets/imgs/storm-trooper/st-5.png"
+            alt=""
+          />
+          <img
+            id="storm-trooper-two"
+            class="portfolio__parallax-img-1"
+            src="./assets/imgs/storm-trooper/st-main.png"
+            alt=""
+          />
+          <img
+            id="storm-trooper-three"
+            class="portfolio__parallax-img-1"
+            src="./assets/imgs/storm-trooper/st-top.png"
+            alt=""
+          />
+          <img
+            id="storm-trooper-four"
+            class="portfolio__parallax-img-1"
+            src="./assets/imgs/storm-trooper/st-white-base.png"
+            alt=""
+          />
+        </div>
+        <div id="portfolio" class="portfolio-section__container">
           <p class="portfolio-section__subtitle subtitle">
             Web Developer / Programmer / Designer
           </p>
@@ -56,15 +107,43 @@
             Clean code evangelist and study addict
           </p>
         </div>
+        <!-- <div id="portfolio" class="portfolio-section__container">
+          <div class="portfolio__box">
+            <span></span>
+            <div class="portfolio__content">
+              <p class="portfolio-section__subtitle subtitle">
+                Web Developer / Programmer / Designer
+              </p>
+              <h1 class="portfolio-section__title title">Nikos Argalias</h1>
+              <p class="portfolio-section__em-text em-text">
+                Clean code evangelist and study addict
+              </p>
+            </div>
+          </div>
+        </div> -->
       </section>
 
-      <section class="about-section scroll-snap">
-        <div class="about-section__container">
-          <p class="about-section__subtitle subtitle">
+      <section id="about-section" class="about scroll-snap">
+        <div class="about__parallax">
+          <img
+            id="rebel-one"
+            class="about__parallax-img-1"
+            src="./assets/imgs/rebel/rebel-1.png"
+            alt=""
+          />
+          <img
+            id="rebel-two"
+            class="about__parallax-img-1"
+            src="./assets/imgs/rebel/rebel-2.png"
+            alt=""
+          />
+        </div>
+        <div class="about__container">
+          <p class="about__subtitle subtitle">
             Web Developer / Programmer / Designer
           </p>
-          <h1 class="about-section__title title">Nikos Argalias</h1>
-          <p class="about-section__em-text em-text">
+          <h1 class="about__title title">Nikos Argalias</h1>
+          <p class="about__em-text em-text">
             Clean code evangelist and study addict
           </p>
         </div>

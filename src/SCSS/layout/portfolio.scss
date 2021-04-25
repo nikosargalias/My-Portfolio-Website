@@ -2,6 +2,7 @@
 
 .portfolio-section {
   @extend %section;
+  // z-index: 1;
 
   & img {
     position: absolute;
@@ -10,7 +11,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    // transform: translateX(100vw);
+    transition: all 0.5s;
+    z-index: -3;
+    overflow: hidden;
   }
 
   &__title,
@@ -48,33 +52,5 @@
     }
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/imgs/Screenshot\ 2021-04-21\ at\ 01.44.04.png');
-    opacity: 0.5;
-    background-position: right;
-    background-repeat: 1;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-    //the image goes behind the parent element, because the parent element does not have a stacking context.
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/imgs/tommy-van-kessel-ObQ4fncHRHg-unsplash.jpg');
-    background-position: right;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -2;
-  }
+  @extend %yoda-dark-overlay;
 }

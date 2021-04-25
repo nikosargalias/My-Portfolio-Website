@@ -1,0 +1,18 @@
+@use '../abstract/forwards' as *;
+
+.btn {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  background: $dark-background;
+  color: white;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
