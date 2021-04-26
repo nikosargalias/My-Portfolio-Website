@@ -4,46 +4,28 @@
   position: fixed;
   z-index: 1000;
   width: 100%;
-  // height: 100%;
+  background: rgba(0, 0, 0, 0.712);
   &__container {
     @include container;
   }
 }
 
 .menu {
-  // z-index: 1;
-  // padding: 2rem 0;
-  // transition: all 1s;
+  padding: 1rem 0rem;
+  z-index: 1;
 
   &__nav {
-    z-index: 1;
-    // position: absolute;
+    z-index: -1;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    min-height: 100%;
+    width: 100%;
+    height: 90vh;
     padding: 1rem;
-    background: rgba(8, 8, 8, 0.815);
+    background: rgba(8, 8, 8, 0.95);
+    border-radius: 30px;
     transform: translateY(-100%);
     transition: all 0.5s;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    // transform: scale(0%);
-
-    // &::before {
-    //   z-index: 1000;
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100vw;
-    //   height: 100vh;
-    //   padding: 1rem;
-    //   background: rgba(8, 8, 8, 0.815);
-    //   transform: translateY(-100%);
-    //   transition: all 0.5s;
-    // }
   }
 
   &__list {
@@ -72,6 +54,7 @@
     text-decoration: none;
     color: $font-color;
     font-size: 1.5rem;
+    font-weight: 700;
     text-transform: uppercase;
     border-bottom: solid $font-color 1px;
     margin-bottom: 1rem;
@@ -81,7 +64,6 @@
 
   &__burger-btn {
     width: 40px;
-    z-index: 200000;
 
     & > :first-child,
     &::before,
@@ -108,11 +90,10 @@
   }
 
   @include media(tablet) {
-    height: 100%;
-    width: 100%;
+    padding: 2rem 0;
 
     &__nav {
-      z-index: 1;
+      z-index: -1;
       padding: 0rem;
       position: relative;
       width: 100%;
@@ -125,13 +106,16 @@
       height: 100%;
       flex-direction: row;
       justify-content: flex-end;
+      align-items: center;
     }
     &__item {
       transform: translateX(0);
+      margin: auto;
     }
     &__link {
       margin-left: 2rem;
-      font-size: 1rem;
+      font-size: 1.3rem;
+      margin: auto;
     }
 
     &__burger-btn {

@@ -30,9 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function heroParallax() {
     const scrollValueProper =
       (hero.offsetWidth * window.scrollY) / hero.clientHeight;
-
-    // imgOne.style.left = `${scrollValueProper}px`;
-    // imgThree.style.top = `${scrollValueProper}px`;
+    imgOne.style.transform = `translateX(${scrollValueProper}px)`;
     imgTwo.style.transform = `translateX(-${scrollValueProper}px)`;
     heroContent.style.transform = `translateX(${scrollValueProper}px)`;
     hero__btn.style.transform = `translateX(-${scrollValueProper}px)`;

@@ -2,8 +2,11 @@
 
 %rainbow-text {
   background: $rainbow-color;
-  color: transparent;
-  background-clip: text;
+  // color: transparent;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  // background-clip: text;
   animation: rainbow infinite 3s;
   animation-timing-function: steps(5);
   background-size: 400% 100%;
@@ -23,12 +26,6 @@
   line-height: 1.5;
 }
 
-// .subtitle {
-//   font-size: 1rem;
-//   letter-spacing: 8px;
-//   line-height: 1.5;
-// }
-
 .body-text {
   font-size: 1rem;
   letter-spacing: 1px;
@@ -44,8 +41,6 @@
 
 h1 {
   @extend .title;
-  // animation: retro-line infinite 3s;
-  // animation-timing-function: steps(5);
 }
 
 h2 {

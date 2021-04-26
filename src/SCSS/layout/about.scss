@@ -2,7 +2,7 @@
 
 .about {
   @extend %section;
-  z-index: 3;
+  // z-index: 3;
   overflow: hidden;
 
   &__parallax {

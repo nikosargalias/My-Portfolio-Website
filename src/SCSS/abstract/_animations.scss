@@ -59,15 +59,24 @@
 @keyframes reveal {
   0% {
     background: turquoise;
+    -webkit-transform: translateX(100%) scaleX(1%);
+    -moz-transform: translateX(100%) scaleX(1%);
+    -o-transform: translateX(100%) scaleX(1%);
     transform: translateX(100%) scaleX(1%);
   }
   50% {
     background: #00ff00;
+    -webkit-transform: translateX(-50%) scaleX(1%);
+    -moz-transform: translateX(-50%) scaleX(1%);
+    -o-transform: translateX(-50%) scaleX(1%);
     transform: translateX(-50%) scaleX(1%);
   }
   100% {
     background: #6666ff;
     transform: translateX(-50%) translateY(50%) scaleX(5%) scaleY(1%);
+    -webkit-transform: translateX(-50%) translateY(50%) scaleX(5%) scaleY(1%);
+    -moz-transform: translateX(-50%) translateY(50%) scaleX(5%) scaleY(1%);
+    -o-transform: translateX(-50%) translateY(50%) scaleX(5%) scaleY(1%);
   }
 }
 
