@@ -3,8 +3,6 @@
 .hero {
   @extend %section;
   justify-content: space-evenly;
-  align-items: center;
-  overflow: hidden;
 
   &__parallax {
     img {
@@ -21,16 +19,21 @@
   }
 
   &__btn {
-    z-index: 1;
+    z-index: 1000;
   }
 
   &__title {
+    margin-bottom: 2rem;
     position: relative;
     max-width: 80%;
     padding: 1rem;
     animation: retro-line infinite 3s;
     animation-timing-function: steps(5);
     animation-delay: 3s;
+  }
+
+  &__em-text {
+    margin-bottom: 1rem;
   }
 
   .text-reveal {
@@ -43,22 +46,7 @@
     animation: reveal 3s linear;
   }
 
-  &__title,
-  &__subtitle {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  &__em-text {
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
   &__content {
-    z-index: 100;
-  }
-
-  &__container {
     z-index: 2;
     position: relative;
     padding: 1rem;
@@ -68,6 +56,7 @@
     @include flex(column);
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     &::after {
       content: '';

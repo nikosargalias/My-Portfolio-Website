@@ -10,7 +10,7 @@
 @mixin container() {
   width: 800px;
   max-width: 90vw;
-  margin: auto;
+  margin: 0 auto;
 }
 
 @mixin flex($direction) {

@@ -70,3 +70,13 @@
     transform: translateX(-50%) translateY(50%) scaleX(5%) scaleY(1%);
   }
 }
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

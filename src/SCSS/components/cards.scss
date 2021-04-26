@@ -1,0 +1,166 @@
+@use '../abstract/forwards' as *;
+
+.card {
+  &__content {
+    z-index: 1000;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: rgba(0, 0, 0, 1) 10px 10px 50px 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    color: white;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__body {
+    margin-bottom: 1rem;
+  }
+
+  &__box {
+    position: relative;
+    z-index: 102;
+    height: 600px;
+    max-height: 90vh;
+    max-width: 80vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0.5rem;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      border-radius: 8px;
+      transition: 0.5s;
+      transform: skewX(0);
+    }
+    &::after {
+      filter: blur(30px);
+    }
+
+    &:nth-child(1)::before,
+    &:nth-child(1)::after {
+      left: 25%;
+      background: linear-gradient(315deg, #ffbc00, #ff0058);
+    }
+    &:nth-child(2)::before,
+    &:nth-child(2)::after {
+      left: 25%;
+      right: 25%;
+      background: linear-gradient(315deg, #03a9f4, #ff0058);
+    }
+    &:nth-child(3)::before,
+    &:nth-child(3)::after {
+      right: 25%;
+      background: linear-gradient(315deg, #4dff03, #00d0ff);
+    }
+
+    @include media(tablet) {
+      &:nth-child(1)::before,
+      &:nth-child(1)::after {
+        transform: skewX(15deg);
+      }
+      &:nth-child(2)::before,
+      &:nth-child(2)::after {
+        transform: skewX(0);
+      }
+      &:nth-child(3)::before,
+      &:nth-child(3)::after {
+        transform: skewX(-15deg);
+      }
+    }
+
+    &:hover::before,
+    &:hover::after {
+      left: 10%;
+      transform: skewX(0deg);
+      width: 80%;
+      animation: animate 2s linear infinite;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 104;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: rgba(255, 255, 255, 1) 10px 10px 50px 10px;
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transition: 1s all;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 1005;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: rgba(255, 255, 255, 1) 10px 10px 50px 10px;
+        opacity: 0;
+        transition: 1s all;
+      }
+    }
+
+    &:hover span::before {
+      opacity: 0.5;
+      top: -20px;
+      left: 10px;
+      width: 40%;
+      height: 10%;
+      animation: animate 2s linear infinite;
+    }
+
+    &:hover span::after {
+      opacity: 0.5;
+      bottom: -20px;
+      right: 10px;
+      width: 40%;
+      height: 10%;
+      animation: animate 2s linear infinite;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+  }
+}
+
+
