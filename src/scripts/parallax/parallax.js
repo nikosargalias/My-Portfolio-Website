@@ -31,11 +31,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const scrollValueProper =
       (hero.offsetWidth * window.scrollY) / hero.clientHeight;
 
-    imgOne.style.left = `${scrollValueProper}px`;
+    // imgOne.style.left = `${scrollValueProper}px`;
     // imgThree.style.top = `${scrollValueProper}px`;
     imgTwo.style.transform = `translateX(-${scrollValueProper}px)`;
-    heroContent.style.transform = `translateX(${scrollValueProper}px) translateY(${scrollValueProper}px)`;
-    hero__btn.style.transform = `translateX(-${scrollValueProper}px) translateY(${scrollValueProper}px)`;
+    heroContent.style.transform = `translateX(${scrollValueProper}px)`;
+    hero__btn.style.transform = `translateX(-${scrollValueProper}px)`;
   }
 
   function portfolioParallax() {
@@ -46,11 +46,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const heightPercent =
       ((window.scrollY - hero.clientHeight) / portfolioSection.clientHeight) *
       portfolioSection.offsetHeight;
-    console.log(heightPercent);
 
     stormTrooper.style.transform = `translateX(${widthPercent}px)`;
     stormTrooper2.style.transform = `translateX(${-widthPercent}px)`;
-    stormTrooper3.style.transform = `translateY(${-heightPercent}px)`;
+    // stormTrooper3.style.transform = `translateY(${-heightPercent}px)`;
     stormTrooper4.style.transform = `translateX(${-widthPercent}px)`;
   }
 

@@ -6,13 +6,14 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 99;
+  max-width: 100vw;
+  z-index: 100;
 
   .footer__container {
     @include container;
     @include flex(row);
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 }

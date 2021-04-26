@@ -11,6 +11,12 @@
   color: white;
   transition: all 0.2s;
 
+  @include media(tablet) {
+    &--big {
+      font-size: 2rem;
+    }
+  }
+
   &:hover {
     transform: scale(1.2);
     cursor: pointer;

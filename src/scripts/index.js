@@ -10,3 +10,4 @@ import '../main.scss';
 //js
 import './menu/menu';
 import './parallax/parallax';
+import './carosell/carosell';

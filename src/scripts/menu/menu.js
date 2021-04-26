@@ -1,6 +1,7 @@
 const publicEls = {
   listItems: document.querySelectorAll('.menu__item'),
   navMenu: document.getElementById('menu__nav'),
+  // menu: document.getElementById('menu'),
   listItems: document.querySelectorAll('.menu__item'),
   burgerBtn: document.getElementById('menu__burger-btn'),
 };
@@ -19,8 +20,9 @@ function onClickBurgerBtn(e) {
 }
 
 function slideInMenu() {
-  const { navMenu, listItems } = publicEls;
+  const { navMenu, listItems, menu } = publicEls;
   navMenu.classList.toggle('menu__open');
+  // menu.classList.toggle('menu__height');
   listItems.forEach((item, i) => {
     item.classList.toggle('menu__open');
   });

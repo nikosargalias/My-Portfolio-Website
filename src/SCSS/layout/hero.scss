@@ -3,8 +3,13 @@
 .hero {
   @extend %section;
   justify-content: space-evenly;
+  z-index: 1;
+
 
   &__parallax {
+    overflow: hidden;
+    z-index: 1;
+
     img {
       position: absolute;
       top: 0;
@@ -14,12 +19,39 @@
       object-fit: cover;
       transition: all 0.5s;
       overflow: hidden;
-      z-index: -1;
+      z-index: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('assets/imgs/yoda/yoda-background.png');
+      background-position: 100% 90%;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-attachment: fixed;
+      z-index: 2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: black;
+      z-index: -100;
     }
   }
 
   &__btn {
-    z-index: 1000;
+    z-index: 100;
   }
 
   &__title {
@@ -47,7 +79,6 @@
   }
 
   &__content {
-    z-index: 2;
     position: relative;
     padding: 1rem;
     background: $dark-background;
@@ -71,6 +102,4 @@
       animation-fill-mode: forwards;
     }
   }
-
-  @extend %yoda-dark-overlay;
 }

@@ -9,27 +9,27 @@
 
   <body class="page">
     <header class="header">
-      <div class="header__container menu">
-        <div id="menu__burger-btn" class="menu__burger-btn">
-          <div class="menu__burger-line"></div>
-        </div>
-        <nav id="menu__nav" class="menu__nav">
-          <ul id="menu__list" class="menu__list">
-            <li class="menu__item">
-              <a href="#" class="menu__link">Home</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">My Projects</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">About Me</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">Contact Me</a>
-            </li>
-          </ul>
-        </nav>
+      <!-- <div id="menu" class="header__container menu"> -->
+      <div id="menu__burger-btn" class="menu__burger-btn">
+        <div class="menu__burger-line"></div>
       </div>
+      <nav id="menu__nav" class="menu__nav">
+        <ul id="menu__list" class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Home</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">My Projects</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">About Me</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- </div> -->
     </header>
 
     <main class="page__main">
@@ -72,7 +72,7 @@
       </div>
 
       <section id="portfolio" class="portfolio-section scroll-snap">
-        <div class="portfolio__parallax">
+        <div class="portfolio-section__parallax">
           <img
             id="storm-trooper-one"
             class="portfolio__parallax-img-1"
@@ -98,20 +98,19 @@
             alt=""
           />
         </div>
-        <!-- <div id="portfolio" class="portfolio-section__container">
-          <p class="portfolio-section__subtitle subtitle">
-            Web Developer / Programmer / Designer
-          </p>
-          <h1 class="portfolio-section__title title">Nikos Argalias</h1>
-          <p class="portfolio-section__em-text em-text">
-            Clean code evangelist and study addict
-          </p>
-        </div> -->
+        <div class="portfolio__carosell carosell__btn">
+          <span id="carosell-left" class="carosell__btn-single btn--big"
+            >L</span
+          >
+          <span id="carosell-right" class="carosell__btn-single btn--big"
+            >R</span
+          >
+        </div>
         <div
-          id="portfolio"
-          class="portfolio-section__container card__container"
+          id="portfolio__carosell"
+          class="portfolio-section__container cards"
         >
-          <div class="portfolio-section__box card__box">
+          <!-- <article class="portfolio-section__box card__box">
             <span></span>
             <div class="card__content">
               <h2 class="card__title">Nikos Argalias</h2>
@@ -123,8 +122,8 @@
                 <a class="card__link" href="#">Codepen</a>
               </div>
             </div>
-          </div>
-          <div class="portfolio-section__box card__box">
+          </article>
+          <article class="portfolio-section__box card__box">
             <span></span>
             <div class="card__content">
               <h2 class="card__title">Nikos Argalias</h2>
@@ -136,8 +135,8 @@
                 <a class="card__link" href="#">Codepen</a>
               </div>
             </div>
-          </div>
-          <div class="portfolio-section__box card__box">
+          </article>
+          <article class="portfolio-section__box card__box">
             <span></span>
             <div class="card__content">
               <h2 class="card__title">Nikos Argalias</h2>
@@ -149,7 +148,7 @@
                 <a class="card__link" href="#">Codepen</a>
               </div>
             </div>
-          </div>
+          </article> -->
         </div>
       </section>
 
