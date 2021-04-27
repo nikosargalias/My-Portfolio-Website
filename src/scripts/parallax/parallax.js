@@ -1,24 +1,24 @@
-// Hero Images
-const imgOne = document.getElementById('para-img-1');
-const imgTwo = document.getElementById('para-img-2');
-const imgThree = document.getElementById('para-img-3');
-const heroContent = document.getElementById('hero__content');
-const hero__btn = document.getElementById('hero__btn');
-const hero = document.getElementById('hero');
+window.addEventListener('DOMContentLoaded', (event) => {
+  // Hero Images
+  const imgOne = document.getElementById('para-img-1');
+  const imgTwo = document.getElementById('para-img-2');
+  const imgThree = document.getElementById('para-img-3');
+  const heroContent = document.getElementById('hero__content');
+  const hero__btn = document.getElementById('hero__btn');
+  const hero = document.getElementById('hero');
 
-//   Portfolio Images & section
-const stormTrooper = document.getElementById('storm-trooper-one');
-const stormTrooper2 = document.getElementById('storm-trooper-two');
-const stormTrooper3 = document.getElementById('storm-trooper-three');
-const stormTrooper4 = document.getElementById('storm-trooper-four');
-const portfolioSection = document.getElementById('portfolio');
+  //   Portfolio Images & section
+  const stormTrooper = document.getElementById('storm-trooper-one');
+  const stormTrooper2 = document.getElementById('storm-trooper-two');
+  const stormTrooper3 = document.getElementById('storm-trooper-three');
+  const stormTrooper4 = document.getElementById('storm-trooper-four');
+  const portfolioSection = document.getElementById('portfolio');
 
-// About images
-const aboutSection = document.getElementById('about-section');
-const rebel1 = document.getElementById('rebel-one');
-const rebel2 = document.getElementById('rebel-two');
+  // About images
+  const aboutSection = document.getElementById('about-section');
+  const rebel1 = document.getElementById('rebel-one');
+  const rebel2 = document.getElementById('rebel-two');
 
-window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', parallaxSequence);
 
   function parallaxSequence() {
