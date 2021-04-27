@@ -20,10 +20,21 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader',
       },
-      {
-        test: /\.file.css$/i,
-        type: 'asset/resource',
-      },
+      // {
+      //   test: /\.scss$/i,
+      //   type: 'asset/resource',
+      //   generator: {
+      //     filename: 'assets/imgs/[hash][ext][query]',
+      //   },
+      // },
+      // {
+      //   test: /\.file.css$/i,
+      //   type: 'asset/resource',
+      // },
+      // {
+      //   test: /\.file.scss$/i,
+      //   type: 'asset/resource',
+      // },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset',

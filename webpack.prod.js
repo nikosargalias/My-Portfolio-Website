@@ -17,12 +17,7 @@ module.exports = merge(common, {
       {
         test: /\.scss$/i,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: path.resolve(__dirname, 'dist', 'assets', 'imgs'),
-            },
-          },
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
           'glob-import-loader',
@@ -34,17 +29,22 @@ module.exports = merge(common, {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: path.resolve(__dirname, 'dist', 'assets', 'imgs'),
+              publicPath: path.resolve(__dirname, 'dist'),
             },
           },
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+            },
+          },
         ],
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
+      filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css',
     }),
     new CssMinimizerPlugin(),

@@ -11,6 +11,12 @@
   background-size: 400% 100%;
 }
 
+@media (prefers-reduced-motion) {
+  %rainbow-text {
+    animation: none;
+  }
+}
+
 .title {
   letter-spacing: 2px;
   font-size: 2rem;

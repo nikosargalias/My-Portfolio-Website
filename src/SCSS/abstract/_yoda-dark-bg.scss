@@ -1,4 +1,30 @@
-%yoda-dark-overlay {
+// @import '../../assets/imgs/yoda/yoda-background.png';
+
+// %yoda-dark-overlay {
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: url('assets/imgs/yoda/yoda-background.png');
+//     background-position: 100% 90%;
+//     background-repeat: no-repeat;
+//     background-size: 50%;
+//     background-attachment: fixed;
+//     z-index: 2;
+//   }
+//   // &::after {
+//   //   content: '';
+//   //   width: 100%;
+//   //   height: 100%;
+//   //   position: absolute;
+//   //   background: black;
+//   //   z-index: -100;
+//   // }
+// }
+%yoda {
   &::before {
     content: '';
     position: absolute;
@@ -16,6 +42,9 @@
 
   // &::after {
   //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
   //   width: 100%;
   //   height: 100%;
   //   position: absolute;
