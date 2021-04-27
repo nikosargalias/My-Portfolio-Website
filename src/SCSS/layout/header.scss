@@ -5,6 +5,7 @@
   z-index: 1000;
   width: 100%;
   background: rgba(0, 0, 0, 0.712);
+  transition: all 1s;
   &__container {
     @include container;
   }
@@ -63,7 +64,11 @@
   }
 
   &__burger-btn {
-    width: 40px;
+    background: $dark-background;
+    padding: 10px;
+    border-radius: 10px;
+    // width: 40px;
+    width: 60px;
 
     & > :first-child,
     &::before,

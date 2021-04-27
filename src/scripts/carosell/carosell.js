@@ -40,13 +40,18 @@ function right(cardIds) {
   });
 
   function nextCardsRight(cardId) {
-    cards.forEach((e, i) => {
-      if (cardId == i && cardId < cards.length - 1) {
-        nextCardsArr.push(cards[i + 1]);
-      } else if (cardId == cards.length - 1) {
-        nextCardsArr.push(cards[0]);
-      }
-    });
+    //Original
+    // if (cardId == cards.length - 1) {
+    //   nextCardsArr.push(cards[0]);
+    //   return;
+    // }
+    // cards.forEach((e, i) => {
+    //   if (cardId == i && cardId < cards.length - 1) {
+    //     nextCardsArr.push(cards[i + 1]);
+    //   }
+    // });
+
+    nextCardsArr.push(cards[(Number(cardId) + 1) % cards.length]);
   }
 
   return nextCardsArr;
@@ -60,11 +65,12 @@ function left(cardIds) {
   });
 
   function nextCardsLeft(cardId) {
+    if (cardId == 0) {
+      nextCardsArr.push(cards[cards.length - 1]);
+    }
     cards.forEach((e, i) => {
       if (cardId == i && cardId > 0) {
         nextCardsArr.push(cards[i - 1]);
-      } else if (cardId == 0) {
-        nextCardsArr.push(cards[cards.length - 1]);
       }
     });
   }

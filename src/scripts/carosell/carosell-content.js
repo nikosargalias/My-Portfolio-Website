@@ -3,13 +3,11 @@ const cardContentDiv = document.createElement('div');
 cardContentDiv.innerHTML = `  <article id="card-0" class="portfolio-section__box card__box">
                         <span></span>
                             <div class="card__content">
-                                <h2 class="card__title">Nikos Argalias 1</h2>
-                                <p class="card__body body">
-                                    Clean code evangelist and study addict
+                                <h2 class="card__title">Soundflow Music Academy</h2>
+                                <p class="card__body body">An online learning platform similar to Udemy/Brilliant which implements teacher friendly content upload, content lock, multiple subscription levels and course progression tracking
                                 </p>
                                 <div class="card__links">
-                                    <a class="card__link" href="#">Github</a>
-                                    <a class="card__link" href="#">Codepen</a>
+                                    <a class="card__link" href="#">Commercial Website</a>
                                 </div>
                             </div>
                     </article>

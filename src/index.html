@@ -8,7 +8,7 @@
   </head>
 
   <body class="page">
-    <header class="header">
+    <header id="header" class="header">
       <div id="menu" class="header__container menu">
         <div id="menu__burger-btn" class="menu__burger-btn">
           <div class="menu__burger-line"></div>
@@ -25,7 +25,7 @@
               <a href="#about-section" class="menu__link">About Me</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Contact Me</a>
+              <a href="#contact-section" class="menu__link">Contact Me</a>
             </li>
           </ul>
         </nav>
@@ -59,7 +59,7 @@
             Web Developer - Programmer - Designer
           </p>
           <h1 class="hero__title">
-            <em>Nikos</em> <em>Argalias</em>
+            <em class="rainbow">Nikos</em> <em class="rainbow">Argalias</em>
             <div class="text-reveal"></div>
           </h1>
           <p class="hero__em-text em-text">
@@ -67,7 +67,7 @@
           </p>
         </section>
         <a href="#portfolio" id="hero__btn" class="btn hero__btn"
-          ><em>See My Work</em></a
+          ><em class="rainbow">See My Work</em></a
         >
       </div>
 
@@ -167,14 +167,110 @@
             alt=""
           />
         </div>
-        <div class="about__container">
-          <p class="about__subtitle subtitle">
-            Web Developer / Programmer / Designer
-          </p>
-          <h1 class="about__title title">Nikos Argalias</h1>
-          <p class="about__em-text em-text">
-            Clean code evangelist and study addict
-          </p>
+        <div class="cards about__container">
+          <article class="about__box about__tech-stack">
+            <span></span>
+            <div class="about__content">
+              <h2 class="about__title">Technology Stack</h2>
+              <!-- <p class="card__body body"></p> -->
+              <ul class="about__list">
+                <li>Javascript</li>
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>Sass/SCSS</li>
+                <li>Webpack</li>
+                <li>Babel</li>
+                <li>Prettier</li>
+                <li>ESLint</li>
+                <li>Github</li>
+                <li>Git (command-line)</li>
+                <li>Adobe XD</li>
+              </ul>
+              <!-- <div class="card__links">
+                <a class="card__link" href="#">Github</a>
+                <a class="card__link" href="#">Codepen</a>
+              </div> -->
+            </div>
+          </article>
+          <article class="about__box">
+            <span></span>
+            <div class="about__content">
+              <h2 class="about__title">My Background</h2>
+              <!-- <p class="about__body body"> -->
+              <p class="about__subtitle">
+                <em
+                  >"A detail oriented developer with a background in
+                  business"</em
+                >
+              </p>
+              <br />
+              <p>
+                I have developped frontend technologies for many business.
+                Ranging from Udemy style e-learning platforms, to entire company
+                websites. I utilise clean programming principles and a component
+                based architecture to keep the codebase maintainable and easily
+                updatable. I focus on creating accesible websites that comply
+                with WCGA guidelines, and implement a feature > dev > master
+                branch workflow with git to keep clean history and make it easy
+                to test new features prior to implementation.
+              </p>
+              <br />
+              <p>
+                I have primarily worked as a contractor for companies such as
+                Soundflow Music Academy, XR Events and Veneficus (the no1
+                freebie company in the UK). As a result, I regularly have to
+                implement more than just the code. Therefore, I am well versed
+                in creating and prototyping designs using Adobe XD, as well as
+                core design principles. I have also developped go-to-market
+                strategies for companies for companies such as Soundflow Music
+                Academy, XR Events, ASMastering.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact-section" class="contact scroll-snap">
+        <div class="cards contact__container">
+          <h2 class="contact__title title">Contact Me</h2>
+          <ul class="contact__details">
+            <li class="contact__detail">Nikos Argalias</li>
+            <li class="contact__detail">Number: +44 (0) 7865 364122</li>
+            <li class="contact__detail">Email: nikosgalias@gmail.com</li>
+          </ul>
+          <form
+            class="contact__form form"
+            method="POST"
+            data-netlify="true"
+            name="contact"
+          >
+            <label class="form__label" for="name">Name</label>
+            <input
+              id="name"
+              type="name"
+              name="name"
+              class="form__name"
+              placeholder="enter your name"
+            />
+            <label class="form__label" for="email">Email</label>
+            <input
+              if="email"
+              type="email"
+              name="email"
+              class="form__email"
+              placeholder="enter your email"
+            />
+            <label class="form__label" for="message">message</label>
+            <textarea
+              if="message"
+              type="message"
+              class="form__message"
+              placeholder="enter your message"
+            ></textarea>
+            <button class="form__button btn btn--small" type="submit">
+              Send
+            </button>
+          </form>
         </div>
       </section>
     </main>

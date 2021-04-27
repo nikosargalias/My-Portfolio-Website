@@ -11,3 +11,4 @@ import '../main.scss';
 import './menu/menu';
 import './parallax/parallax';
 import './carosell/carosell';
+import './global/scroll';

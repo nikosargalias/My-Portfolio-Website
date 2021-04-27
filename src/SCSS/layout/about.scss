@@ -2,7 +2,9 @@
 
 .about {
   @extend %section;
-  // z-index: 3;
+  height: 100%;
+  min-height: 100vh;
+  padding: 1rem 0 4rem 0;
   overflow: hidden;
 
   &__parallax {
@@ -61,28 +63,84 @@
   }
 
   &__container {
-    padding: 1rem;
-    background: $dark-background;
-    border-radius: 30px;
     @include container;
-    @include flex(column);
+    width: 800px;
+    max-width: 95vw;
+    border-radius: 30px;
+    @include flex(row);
     justify-content: center;
     align-items: center;
     position: relative;
+  }
 
-    &::after {
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__box {
+    position: relative;
+    color: white;
+    padding: 1rem;
+    z-index: 1;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 50px;
+    border-radius: 30px;
+
+    &:hover {
+      box-shadow: rgba(255, 0, 247, 0.502) 5px 5px 30px,
+        rgba(255, 255, 255, 0.502) -1px -1px 20px;
+    }
+
+    &::before {
+      z-index: -1;
       content: '';
       position: absolute;
-      bottom: 0;
+      top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      border-top: 10px solid rgba(255, 0, 0, 0.427);
-      transform: translateX(-100vw);
-      animation: snakeLine 4s linear;
-      animation-fill-mode: forwards;
+      background: linear-gradient(
+        to right,
+        rgba(#ff6666, 0.6),
+        rgba(#6666ff, 0.6)
+      );
+      border-radius: 30px;
     }
   }
 
-  @extend %yoda-dark-overlay;
+  &__content {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: rgba(0, 0, 0, 1) 10px 10px 50px 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    color: white;
+    text-align: start;
+    transition: all 2s;
+  }
+
+  &__tech-stack {
+    display: none;
+  }
+
+
+
+  @include media(tablet) {
+    padding: 2rem 0;
+
+    &__box {
+      padding: 2rem;
+    }
+
+    &__tech-stack {
+      display: initial;
+    }
+
+    &__list {
+      padding: 0 1rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
 }
