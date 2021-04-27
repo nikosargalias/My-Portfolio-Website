@@ -16,16 +16,22 @@
         <nav id="menu__nav" class="menu__nav">
           <ul id="menu__list" class="menu__list">
             <li class="menu__item">
-              <a href="#hero" class="menu__link">Home</a>
+              <a tabindex="0" href="#hero" class="menu__link">Home</a>
             </li>
             <li class="menu__item">
-              <a href="#portfolio" class="menu__link">My Projects</a>
+              <a tabindex="0" href="#portfolio" class="menu__link"
+                >My Projects</a
+              >
             </li>
             <li class="menu__item">
-              <a href="#about-section" class="menu__link">About Me</a>
+              <a tabindex="0" href="#about-section" class="menu__link"
+                >About Me</a
+              >
             </li>
             <li class="menu__item">
-              <a href="#contact-section" class="menu__link">Contact Me</a>
+              <a tabindex="0" href="#contact-section" class="menu__link"
+                >Contact Me</a
+              >
             </li>
           </ul>
         </nav>
@@ -254,7 +260,7 @@
             />
             <label class="form__label" for="email">Email</label>
             <input
-              if="email"
+              id="email"
               type="email"
               name="email"
               class="form__email"
@@ -262,7 +268,7 @@
             />
             <label class="form__label" for="message">message</label>
             <textarea
-              if="message"
+              id="message"
               type="message"
               class="form__message"
               placeholder="enter your message"
@@ -278,16 +284,13 @@
     <footer class="page__footer footer">
       <div class="footer__container">
         <div class="social-icons">
-          <a class="social-icons__link" href="#!">
+          <a alt="linkedin link" class="social-icons__link" href="#!">
             <i class="fab fa-linkedin fa-2x"></i>
           </a>
-          <a class="social-icons__link" href="#!">
+          <a alt="codepen link" class="social-icons__link" href="#!">
             <i class="fab fa-codepen fa-2x"></i>
           </a>
-          <a class="social-icons__link" href="#!">
-            <i class="fab fa-instagram fa-2x"></i>
-          </a>
-          <a class="social-icons__link" href="#!">
+          <a alt="github link" class="social-icons__link" href="#!">
             <i class="fab fa-github fa-2x"></i>
           </a>
         </div>

@@ -61,6 +61,10 @@
     margin-bottom: 1rem;
     @extend %rainbow-text;
     animation-duration: 5s;
+
+    // &:focus {
+
+    // }
   }
 
   &__burger-btn {
