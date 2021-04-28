@@ -24,10 +24,6 @@
     @extend %black-bg;
   }
 
-  &__btn {
-    z-index: 100;
-  }
-
   &__title {
     margin-bottom: 2rem;
     position: relative;
@@ -40,11 +36,14 @@
       animation: none;
     }
     animation-timing-function: steps(5);
-    // animation-delay: 3s;
   }
 
   &__em-text {
     margin-bottom: 1rem;
+  }
+
+  &__typewritter {
+    border-right: 1px solid white;
   }
 
   .text-reveal {
@@ -80,8 +79,8 @@
       border-radius: 30px;
 
       @include media(tablet) {
-        animation: snakeLine 4s linear;
-        animation-fill-mode: forwards;
+        // animation: snakeLine 4s linear;
+        // animation-fill-mode: forwards;
       }
     }
   }
