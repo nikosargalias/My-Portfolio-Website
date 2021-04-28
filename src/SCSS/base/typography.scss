@@ -44,6 +44,24 @@
   line-height: 1.5;
 }
 
+@include media(desktop) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .body-text {
+    font-size: 1.2rem;
+  }
+
+  .em-text {
+    font-size: 1.2rem;
+  }
+}
+
 h1 {
   @extend .title;
 }

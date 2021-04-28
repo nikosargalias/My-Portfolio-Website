@@ -41,7 +41,7 @@
 
   &__container {
     @include container;
-    width: 800px;
+    width: 900px;
     max-width: 95vw;
     border-radius: 30px;
     @include flex(row);
