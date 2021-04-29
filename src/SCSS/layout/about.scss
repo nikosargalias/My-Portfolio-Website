@@ -1,4 +1,5 @@
 @use '../abstract/forwards' as *;
+@use '../abstract/parallax' as *;
 
 .about {
   @extend %section;
@@ -16,9 +17,9 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: all 0.5s;
       overflow: hidden;
       z-index: 1;
+      transition: 0.2s transform;
     }
     @extend %yoda;
     @extend %black-bg;
