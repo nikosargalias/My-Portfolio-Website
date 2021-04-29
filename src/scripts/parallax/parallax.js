@@ -22,9 +22,27 @@ window.addEventListener('DOMContentLoaded', (event) => {
   window.addEventListener('scroll', parallaxSequence);
 
   function parallaxSequence() {
-    heroParallax();
-    portfolioParallax();
-    aboutParallax();
+    if (isInViewport(hero)) {
+      heroParallax();
+    }
+
+    if (isInViewport(portfolioSection)) {
+      portfolioParallax();
+    }
+
+    if (isInViewport(aboutSection)) {
+      aboutParallax();
+    }
+  }
+
+  function isInViewport(element) {
+    const elementPos = element.getBoundingClientRect();
+    if (elementPos.bottom >= elementPos.bottom - elementPos.bottom * 2) {
+      if (elementPos.top <= elementPos.height) {
+        return true;
+      }
+    }
+    return false;
   }
 
   function heroParallax() {
@@ -47,7 +65,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     stormTrooper.style.transform = `translateX(${widthPercent}px)`;
     stormTrooper2.style.transform = `translateX(${-widthPercent}px)`;
-    // stormTrooper3.style.transform = `translateY(${-heightPercent}px)`;
     stormTrooper4.style.transform = `translateX(${-widthPercent}px)`;
   }
 
