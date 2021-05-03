@@ -32,4 +32,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
   function rotateBurgerLines() {
     publicEls.burgerBtn.classList.toggle('menu__burger-btn--clicked');
   }
+  
 });

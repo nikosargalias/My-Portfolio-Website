@@ -21,10 +21,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const rebel1 = document.getElementById('rebel-one');
   const rebel2 = document.getElementById('rebel-two');
 
-  //  throttled fn
   const parallaxThrottle = throttle(parallaxSequence, 50);
 
-  // Event Listener
   window.addEventListener('scroll', parallaxThrottle);
 
   function parallaxSequence() {
@@ -54,18 +52,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
   function heroParallax() {
     const scrollValueProper =
       (hero.offsetWidth * window.scrollY) / hero.clientHeight;
-
-    if (window.scrollY <= hero.clientHeight / 6) {
-      imgOne.style.transform = `translateX(0px)`;
-      imgTwo.style.transform = `translateX(0px)`;
-      heroContent.style.transform = `translateX(0px)`;
-      hero__btn.style.transform = `translateX(0px)`;
-    } else {
-      imgOne.style.transform = `translateX(-100vw)`;
-      imgTwo.style.transform = `translateX(100vw)`;
-      heroContent.style.transform = `translateX(100vw)`;
-      hero__btn.style.transform = `translateX(-100vw)`;
-    }
+    imgOne.style.transform = `translateX(${scrollValueProper}px)`;
+    imgTwo.style.transform = `translateX(-${scrollValueProper}px)`;
+    heroContent.style.transform = `translateX(${scrollValueProper}px)`;
+    hero__btn.style.transform = `translateX(-${scrollValueProper}px)`;
   }
 
   function portfolioParallax() {
@@ -77,26 +67,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
       ((window.scrollY - hero.clientHeight) / portfolioSection.clientHeight) *
       portfolioSection.offsetHeight;
 
-    if (window.scrollY < hero.clientHeight) {
-      stormTrooper.style.transform = `translateX(-100vw)`;
-      stormTrooper2.style.transform = `translateX(-100vw)`;
-      stormTrooper3.style.transform = `translateX(100vw)`;
-      stormTrooper4.style.transform = `translateX(100vw)`;
-    }
-
-    if (heightPercent >= -200) {
-      stormTrooper.style.transform = `translateX(0px)`;
-      stormTrooper2.style.transform = `translateX(0px)`;
-      stormTrooper3.style.transform = `translateX(0px)`;
-      stormTrooper4.style.transform = `translateX(0px)`;
-    }
-
-    if (heightPercent >= 200) {
-      stormTrooper.style.transform = `translateX(100vw)`;
-      stormTrooper2.style.transform = `translateX(100vw)`;
-      stormTrooper3.style.transform = `translateX(-100vw)`;
-      stormTrooper4.style.transform = `translateX(-100vw)`;
-    }
+    stormTrooper.style.transform = `translateX(${widthPercent}px)`;
+    stormTrooper2.style.transform = `translateX(${-widthPercent}px)`;
+    stormTrooper4.style.transform = `translateX(${-widthPercent}px)`;
   }
 
   function aboutParallax() {
@@ -104,19 +77,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       ((window.scrollY - hero.clientHeight * 2) / aboutSection.offsetHeight) *
       aboutSection.offsetWidth;
 
-    if (widthPercent < -200) {
-      rebel1.style.transform = `translateX(-100vw)`;
-      rebel2.style.transform = `translateX(100vw)`;
-    }
-
-    if (widthPercent > -200) {
-      rebel1.style.transform = `translateX(0)`;
-      rebel2.style.transform = `translateX(0)`;
-    }
-
-    if (widthPercent > aboutSection.clientHeight / 6) {
-      rebel1.style.transform = `translateX(100vw)`;
-      rebel2.style.transform = `translateX(-100vw)`;
-    }
+    rebel1.style.transform = `translateX(${-widthPercent}px)`;
+    rebel2.style.transform = `translateX(${widthPercent}px)`;
   }
 });

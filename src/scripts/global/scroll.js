@@ -1,16 +1,24 @@
 import { mobile } from '../media-queries/media-queries';
+import throttle from '../performance/throttle';
 
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('#header');
 
+  const togglehHeaderBackgroundThrottle = throttle(
+    togglehHeaderBackground,
+    150
+  );
+
   // event listeners
-  window.onscroll = togglehHeaderBackground;
+  window.addEventListener('scroll', togglehHeaderBackgroundThrottle);
   window.onresize = largeWindowHeaderBackground;
 
   let lastSCrollPosition = 0;
 
   function togglehHeaderBackground() {
+    console.log('pap');
     const scrolledDown = window.scrollY > lastSCrollPosition;
+
     if (mobile.matches) {
       if (scrolledDown) {
         header.style.background = 'transparent';

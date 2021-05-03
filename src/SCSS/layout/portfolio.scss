@@ -16,13 +16,19 @@
       object-fit: cover;
       overflow: hidden;
       z-index: 1;
-      transition: 0.2s transform;
+      @include transition(long);
 
       &:first-child {
-        transform: translateX(-1000vh);
+        transform: translateX(-100vw);
       }
-      &:last-child {
-        transform: translateX(1000vh);
+      &:nth-child(2) {
+        transform: translateX(-100vh);
+      }
+      &:nth-child(3) {
+        transform: translateX(100vw);
+      }
+      &:nth-child(4) {
+        transform: translateX(100vw);
       }
     }
 
