@@ -19,16 +19,16 @@
       @include transition(long);
 
       &:first-child {
-        transform: translateX(-100vw);
+        transform: translateX(-110vw);
       }
       &:nth-child(2) {
-        transform: translateX(-100vh);
+        transform: translateX(-110vw);
       }
       &:nth-child(3) {
-        transform: translateX(100vw);
+        transform: translateX(110vw);
       }
       &:nth-child(4) {
-        transform: translateX(100vw);
+        transform: translateX(110vw);
       }
     }
 

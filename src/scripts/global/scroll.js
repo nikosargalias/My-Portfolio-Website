@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const togglehHeaderBackgroundThrottle = throttle(
     togglehHeaderBackground,
-    150
+    1000
   );
 
   // event listeners
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let lastSCrollPosition = 0;
 
   function togglehHeaderBackground() {
-    console.log('pap');
+    console.log('papasdasdasd');
     const scrolledDown = window.scrollY > lastSCrollPosition;
 
     if (mobile.matches) {

@@ -1,0 +1,70 @@
+// const carosell = document.getElementById('portfolio__carosell');
+// const cards = document.getElementById('portfolio__carosell').children;
+// const btnLeft = document.getElementById('carosell-left');
+// const btnRight = document.getElementById('carosell-right');
+
+// let num = 0;
+
+// for (let i = 0; i < 3; i++) {
+//   cards[i].classList.add('card__box--active');
+//   num++;
+// }
+
+// btnLeft.onclick = moveLeft;
+// btnRight.onclick = moveRight;
+
+// function moveRight() {
+//   const cardToMoveRight = cards[0];
+//   cardToMoveRight.classList.remove('card__box--active');
+//   cardToMoveRight.remove();
+//   carosell.append(cardToMoveRight);
+
+//   cards[2].classList.add('card__box--active');
+// }
+
+// // function moveRight() {
+// //   //   const cardToMoveRight = cards[num % cards.length];
+// //   const cardToMoveRight = cards[num - 3];
+// //   //   cardToMoveRight.classList.remove('card__box--active');
+// //   cardToMoveRight.classList.add('card__box--right');
+// //   cardToMoveRight.classList.add('card__box--order-right');
+// //   //   cardToMoveRight.remove();
+// //   //   carosell.append(cardToMoveRight);
+
+// //   const cardToShow = cards[num % cards.length];
+// //   cardToShow.classList.remove('card__box--right');
+// //   cardToShow.classList.add('card__box--active');
+// //   //   cards[2].classList.add('card__box--active');
+// //   num++;
+// // }
+
+// //
+// //
+// //
+// //
+// //
+
+// // function moveLeft() {
+// //   num--;
+// //   console.log(cards[num % cards.length]);
+// // }
+
+// // function moveRight() {
+// //   for (let i = 0; i < 3; i++) {
+// //     // console.log(cards[(num + i) % cards.length]);
+// //     const card = cards[(num + i) % cards.length];
+// //     card.classList.remove('card__box--active');
+// //   }
+
+// //   const cardToMoveRight = cards[num % cards.length];
+
+// //   for (let i = 0; i < 3; i++) {
+// // cards[(num + i) % cards.length].classList.add('card__box--active');
+// // num++;
+// // cards[(num + i) % cards.length].classList.add('card__box--active');
+// //   }
+
+// //   num++;
+// // }
+
+// // console.log(7 % cards.length);
