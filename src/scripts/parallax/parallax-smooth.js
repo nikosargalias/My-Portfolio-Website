@@ -56,6 +56,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     imgTwo.style.transform = `translateX(-${scrollValueProper}px)`;
     heroContent.style.transform = `translateX(${scrollValueProper}px)`;
     hero__btn.style.transform = `translateX(-${scrollValueProper}px)`;
+
   }
 
   function portfolioParallax() {
