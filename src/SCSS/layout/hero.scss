@@ -10,6 +10,7 @@
 
     img,
     picture {
+      will-change: opacity, transform;
       position: absolute;
       top: 0;
       left: 0;
@@ -19,6 +20,16 @@
       overflow: hidden;
       z-index: 1;
       @include transition('long');
+
+      &:first-child {
+        z-index: 1;
+      }
+      &:nth-child(2) {
+        z-index: 2;
+      }
+      &:nth-child(3) {
+        z-index: 3;
+      }
     }
 
     @extend %yoda;

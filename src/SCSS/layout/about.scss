@@ -11,6 +11,7 @@
     overflow: hidden;
 
     & img {
+      will-change: opacity, transform;
       position: absolute;
       top: 0;
       left: 0;
@@ -22,9 +23,11 @@
       @include transition(long);
 
       &:first-child {
+        z-index: 1;
         transform: translteX(-100vw);
       }
       &:last-child {
+        z-index: 2;
         transform: translteX(100vw);
       }
     }
