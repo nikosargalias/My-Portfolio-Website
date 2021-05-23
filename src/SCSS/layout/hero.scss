@@ -3,7 +3,7 @@
 
 .hero {
   @extend %section;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
 
   &__parallax {
     overflow: hidden;
@@ -73,15 +73,16 @@
   }
 
   &__content {
-    position: relative;
-    padding: 1rem;
-    background: $dark-background;
-    border-radius: 30px;
     @include container;
     @include flex(column);
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding: 1rem;
+    background: $dark-background;
+    border-radius: 30px;
     @include transition(long);
 
     &::after {

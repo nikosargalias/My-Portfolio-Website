@@ -22,12 +22,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const rebel2 = document.getElementById('rebel-two');
 
   //  throttled fn
-  const parallaxThrottle = throttle(parallaxSequence, 100);
+  const parallaxThrottle = throttle(parallaxSequence, 150);
 
   // Event Listener
   window.addEventListener('scroll', parallaxThrottle);
 
   function parallaxSequence() {
+    console.log('trying');
     if (isInViewport(hero)) {
       window.requestAnimationFrame(heroParallax);
     }

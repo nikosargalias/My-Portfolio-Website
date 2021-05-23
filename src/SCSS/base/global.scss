@@ -13,8 +13,10 @@ html {
   // }
 
   @include media(tablet) {
-    scroll-behavior: smooth;
-    scroll-snap-type: Y mandatory;
+    @supports (scroll-behavior: smooth) and (scroll-snap-type: Y mandatory) {
+      scroll-behavior: smooth;
+      scroll-snap-type: Y mandatory;
+    }
   }
 
   @media screen and (min-width: map-get($breakpoint, 'tablet')) and (min-height: 1000px) {

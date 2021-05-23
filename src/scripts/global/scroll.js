@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
   let lastSCrollPosition = 0;
 
   function togglehHeaderBackground() {
-    console.log('papasdasdasd');
     const scrolledDown = window.scrollY > lastSCrollPosition;
 
     if (mobile.matches) {

@@ -2,7 +2,11 @@
 
 .contact {
   @extend %section;
-  padding: 4rem 0 2rem;
+  padding: 3rem 0 5rem;
+
+  @include media(tablet) {
+    padding: 5rem 0 3rem;
+  }
 
   @extend %yoda;
 
@@ -65,7 +69,7 @@
 
   @include media(tablet) {
     &__container {
-      padding: 5rem;
+      padding: 4rem;
     }
   }
 }
