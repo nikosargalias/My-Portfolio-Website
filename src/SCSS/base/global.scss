@@ -3,14 +3,19 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-snap-type: Y mandatory;
+  // scroll-behavior: smooth;
+  // scroll-snap-type: Y mandatory;
 
   font-size: 80%;
 
   // @include media(tablet) {
   //   font-size: 90%;
   // }
+
+  @include media(tablet) {
+    scroll-behavior: smooth;
+    scroll-snap-type: Y mandatory;
+  }
 
   @media screen and (min-width: map-get($breakpoint, 'tablet')) and (min-height: 1000px) {
     font-size: 100%;
