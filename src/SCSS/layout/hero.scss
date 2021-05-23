@@ -1,4 +1,5 @@
 @use '../abstract/forwards' as *;
+@use '../abstract/parallax' as *;
 
 .hero {
   @extend %section;
@@ -21,15 +22,15 @@
       z-index: 1;
       @include transition('long');
 
-      &:first-child {
-        z-index: 1;
-      }
-      &:nth-child(2) {
-        z-index: 2;
-      }
-      &:nth-child(3) {
-        z-index: 3;
-      }
+      // &:first-child {
+      //   z-index: 1;
+      // }
+      // &:nth-child(2) {
+      //   z-index: 2;
+      // }
+      // &:nth-child(3) {
+      //   z-index: 3;
+      // }
     }
 
     @extend %yoda;
@@ -101,3 +102,7 @@
     }
   }
 }
+
+// .moveP {
+//   transform: translateX(-100vw);
+// }

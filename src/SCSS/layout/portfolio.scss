@@ -2,6 +2,7 @@
 
 .portfolio-section {
   @extend %section;
+  padding: 4rem 0 2rem;
 
   &__parallax {
     z-index: 1;
@@ -20,19 +21,19 @@
 
       &:first-child {
         z-index: 1;
-        transform: translateX(-110vw);
+        // transform: translateX(-110vw);
       }
       &:nth-child(2) {
         z-index: 2;
-        transform: translateX(-110vw);
+        // transform: translateX(-110vw);
       }
       &:nth-child(3) {
         z-index: 3;
-        transform: translateX(110vw);
+        // transform: translateX(110vw);
       }
       &:nth-child(4) {
         z-index: 4;
-        transform: translateX(110vw);
+        // transform: translateX(110vw);
       }
     }
 

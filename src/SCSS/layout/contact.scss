@@ -2,7 +2,7 @@
 
 .contact {
   @extend %section;
-  padding: 2rem 0;
+  padding: 4rem 0 2rem;
 
   @extend %yoda;
 
@@ -25,11 +25,18 @@
     &__email,
     &__name,
     &__message {
+      font-size: inherit;
+      font-family: inherit;
       margin-bottom: 1rem;
-      padding: 0.5rem 2rem;
+      padding: 0.8rem 2rem;
       border-radius: 10px;
       background: rgba(255, 255, 255, 1);
       opacity: 0.8;
+
+      &:focus {
+        border-bottom: orange 5px solid;
+        outline: none;
+      }
     }
 
     &__label {

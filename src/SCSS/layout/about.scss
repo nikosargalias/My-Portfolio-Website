@@ -3,7 +3,7 @@
 
 .about {
   @extend %section;
-  padding: 2rem 0;
+  padding: 4rem 0 2rem;
   overflow: hidden;
 
   &__parallax {
@@ -24,11 +24,11 @@
 
       &:first-child {
         z-index: 1;
-        transform: translteX(-100vw);
+        // transform: translteX(-100vw);
       }
       &:last-child {
         z-index: 2;
-        transform: translteX(100vw);
+        // transform: translteX(100vw);
       }
     }
     @extend %yoda;

@@ -22,22 +22,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const rebel2 = document.getElementById('rebel-two');
 
   //  throttled fn
-  const parallaxThrottle = throttle(parallaxSequence, 50);
+  const parallaxThrottle = throttle(parallaxSequence, 100);
 
   // Event Listener
   window.addEventListener('scroll', parallaxThrottle);
 
   function parallaxSequence() {
     if (isInViewport(hero)) {
-      heroParallax();
+      window.requestAnimationFrame(heroParallax);
     }
 
     if (isInViewport(portfolioSection)) {
-      portfolioParallax();
+      window.requestAnimationFrame(portfolioParallax);
     }
 
     if (isInViewport(aboutSection)) {
-      aboutParallax();
+      window.requestAnimationFrame(aboutParallax);
     }
   }
 
@@ -51,20 +51,31 @@ window.addEventListener('DOMContentLoaded', (event) => {
     return false;
   }
 
-  function heroParallax() {
-    const scrollValueProper =
-      (hero.offsetWidth * window.scrollY) / hero.clientHeight;
+  let lastScrollTop = 0;
 
-    if (window.scrollY <= hero.clientHeight / 6) {
-      imgOne.style.transform = `translateX(0px)`;
-      imgTwo.style.transform = `translateX(0px)`;
-      heroContent.style.transform = `translateX(0px)`;
-      hero__btn.style.transform = `translateX(0px)`;
+  function isScrollDown() {
+    if (lastScrollTop < window.scrollY) {
+      lastScrollTop = window.scrollY;
+      return true;
     } else {
-      imgOne.style.transform = `translateX(-100vw)`;
-      imgTwo.style.transform = `translateX(100vw)`;
-      heroContent.style.transform = `translateX(100vw)`;
-      hero__btn.style.transform = `translateX(-100vw)`;
+      lastScrollTop = window.scrollY;
+      return false;
+    }
+  }
+
+  function heroParallax(e) {
+    if (window.scrollY <= hero.clientHeight / 6) {
+      heroContent.classList.remove(
+        'parallax-movement--right',
+        'parallax-movement--left'
+      );
+      hero__btn.classList.remove(
+        'parallax-movement--right',
+        'parallax-movement--left'
+      );
+    } else if (isScrollDown) {
+      heroContent.classList.add('parallax-movement--right');
+      hero__btn.classList.add('parallax-movement--left');
     }
   }
 
@@ -78,24 +89,36 @@ window.addEventListener('DOMContentLoaded', (event) => {
       portfolioSection.offsetHeight;
 
     if (window.scrollY < hero.clientHeight) {
-      stormTrooper.style.transform = `translateX(-100vw)`;
-      stormTrooper2.style.transform = `translateX(-100vw)`;
-      stormTrooper3.style.transform = `translateX(100vw)`;
-      stormTrooper4.style.transform = `translateX(100vw)`;
+      stormTrooper.classList.add('parallax-movement--left');
+      stormTrooper2.classList.add('parallax-movement--left');
+      stormTrooper3.classList.add('parallax-movement--right');
+      stormTrooper4.classList.add('parallax-movement--right');
     }
 
     if (heightPercent >= -200) {
-      stormTrooper.style.transform = `translateX(0px)`;
-      stormTrooper2.style.transform = `translateX(0px)`;
-      stormTrooper3.style.transform = `translateX(0px)`;
-      stormTrooper4.style.transform = `translateX(0px)`;
+      stormTrooper.classList.remove(
+        'parallax-movement--left',
+        'parallax-movement--right'
+      );
+      stormTrooper2.classList.remove(
+        'parallax-movement--left',
+        'parallax-movement--right'
+      );
+      stormTrooper3.classList.remove(
+        'parallax-movement--left',
+        'parallax-movement--right'
+      );
+      stormTrooper4.classList.remove(
+        'parallax-movement--left',
+        'parallax-movement--right'
+      );
     }
 
     if (heightPercent >= 200) {
-      stormTrooper.style.transform = `translateX(100vw)`;
-      stormTrooper2.style.transform = `translateX(100vw)`;
-      stormTrooper3.style.transform = `translateX(-100vw)`;
-      stormTrooper4.style.transform = `translateX(-100vw)`;
+      stormTrooper.classList.add('parallax-movement--right');
+      stormTrooper2.classList.add('parallax-movement--right');
+      stormTrooper3.classList.add('parallax-movement--left');
+      stormTrooper4.classList.add('parallax-movement--left');
     }
   }
 
@@ -105,18 +128,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
       aboutSection.offsetWidth;
 
     if (widthPercent < -200) {
-      rebel1.style.transform = `translateX(-100vw)`;
-      rebel2.style.transform = `translateX(100vw)`;
+      rebel1.classList.add('parallax-movement--left');
+      rebel2.classList.add('parallax-movement--right');
     }
 
     if (widthPercent > -200) {
-      rebel1.style.transform = `translateX(0)`;
-      rebel2.style.transform = `translateX(0)`;
+      rebel1.classList.remove(
+        'parallax-movement--right',
+        'parallax-movement--left'
+      );
+      rebel2.classList.remove(
+        'parallax-movement--right',
+        'parallax-movement--left'
+      );
     }
 
     if (widthPercent > aboutSection.clientHeight / 6) {
-      rebel1.style.transform = `translateX(100vw)`;
-      rebel2.style.transform = `translateX(-100vw)`;
+      rebel1.classList.add('parallax-movement--right');
+      rebel2.classList.add('parallax-movement--left');
     }
   }
 });

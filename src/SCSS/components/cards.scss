@@ -18,7 +18,7 @@
 
     &__content {
       padding: 1rem;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.7);
       box-shadow: rgba(0, 0, 0, 1) 10px 10px 50px 10px;
       border-radius: 10px;
       color: white;
@@ -56,15 +56,19 @@
 
     &__box {
       position: relative;
-      height: 600px;
+      height: 500px;
       width: 500px;
-      max-height: 90vh;
+      max-height: 70vh;
       max-width: 70vw;
       border-radius: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 2rem 0.5rem;
+
+      @include media(desktop) {
+        height: 600px;
+      }
 
       &::before,
       &::after {

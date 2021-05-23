@@ -5,6 +5,20 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: Y mandatory;
+
+  font-size: 80%;
+
+  // @include media(tablet) {
+  //   font-size: 90%;
+  // }
+
+  @media screen and (min-width: map-get($breakpoint, 'tablet')) and (min-height: 1000px) {
+    font-size: 100%;
+  }
+
+  @media screen and (min-width: 1500px) and (min-height: 1000px) {
+    font-size: 100%;
+  }
 }
 
 *,

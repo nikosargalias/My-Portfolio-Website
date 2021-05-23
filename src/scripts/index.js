@@ -8,9 +8,10 @@ import '@fortawesome/fontawesome-free/js/brands';
 import '../main.scss';
 
 //js
+// import './carosell/carosell-improved';
+
 import './menu/menu';
 import './parallax/parallax';
 import './carosell/carosell';
-// import './carosell/carosell-improved';
 import './global/scroll';
 import './typewritter/typewritter';
