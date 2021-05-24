@@ -41,11 +41,18 @@
       background: rgba(255, 255, 255, 1);
       opacity: 0.8;
       border: none;
+      -webkit-appearance: none;
 
       &:focus {
         border-bottom: orange 5px solid;
         outline: none;
       }
+    }
+
+    &__link:link {
+      color: inherit;
+      font-size: inherit;
+      font-family: inherit;
     }
 
     &__label {

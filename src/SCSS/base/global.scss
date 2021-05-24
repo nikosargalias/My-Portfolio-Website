@@ -43,7 +43,24 @@ button {
   font-size: inherit;
 }
 
-link {
-  -webkit-appearance: none;
-  color: rgb(80, 220, 255);
+a {
+  @include transition(short);
+
+  &:link {
+    -webkit-appearance: none;
+    color: rgb(130, 217, 239);
+    text-decoration: none;
+  }
+
+  &:active,
+  &:visited,
+  &:focus {
+    color: rgb(84, 158, 176);
+  }
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
 }
