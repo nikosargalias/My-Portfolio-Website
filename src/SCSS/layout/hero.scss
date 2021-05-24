@@ -9,9 +9,8 @@
     overflow: hidden;
     z-index: 1;
 
-    img,
-    picture {
-      will-change: opacity, transform;
+    img {
+      // will-change: opacity, transform;
       position: absolute;
       top: 0;
       left: 0;
@@ -33,7 +32,7 @@
       // }
     }
 
-    @extend %yoda;
+    // @extend %yoda;
   }
 
   &__title {
@@ -43,11 +42,11 @@
     padding: 1rem;
     box-shadow: turquoise -10px 10px 0px 0px;
     animation: retro-line infinite 3s;
+    animation-timing-function: steps(5);
 
     @media (prefers-reduced-motion) {
       animation: none;
     }
-    animation-timing-function: steps(5);
   }
 
   &__em-text {
@@ -60,16 +59,6 @@
 
   &__btn {
     @include transition(long);
-  }
-
-  .text-reveal {
-    transform: scale(0%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    // animation: reveal 3s linear;
   }
 
   &__content {
@@ -96,10 +85,10 @@
       transform: translateX(0%) translateY(0%) rotate(180deg);
       border-radius: 30px;
 
-      @include media(tablet) {
-        // animation: snakeLine 4s linear;
-        // animation-fill-mode: forwards;
-      }
+      // @include media(tablet) {
+      // animation: snakeLine 4s linear;
+      // animation-fill-mode: forwards;
+      // }
     }
   }
 }

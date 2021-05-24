@@ -58,17 +58,13 @@
       position: relative;
       height: 500px;
       width: 500px;
-      max-height: 70vh;
+      max-height: 60vh;
       max-width: 70vw;
       border-radius: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 2rem 0.5rem;
-
-      @include media(desktop) {
-        height: 600px;
-      }
 
       &::before,
       &::after {

@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const togglehHeaderBackgroundThrottle = throttle(
     togglehHeaderBackground,
-    100
+    200
   );
 
   // event listeners

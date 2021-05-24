@@ -127,7 +127,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       );
     }
 
-    if (widthPercent > aboutSection.clientHeight / 5) {
+    if (widthPercent > aboutSection.clientHeight / 4) {
       rebel1.classList.add('parallax-movement--right');
       rebel2.classList.add('parallax-movement--left');
     }

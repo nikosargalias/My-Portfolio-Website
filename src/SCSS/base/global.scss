@@ -3,26 +3,22 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
-  // scroll-behavior: smooth;
-  // scroll-snap-type: Y mandatory;
-
   font-size: 80%;
 
-  // @include media(tablet) {
-  //   font-size: 90%;
-  // }
-
   @include media(tablet) {
-    @supports (scroll-behavior: smooth) and (scroll-snap-type: Y mandatory) {
+    @supports (scroll-behavior: smooth) {
       scroll-behavior: smooth;
-      scroll-snap-type: Y mandatory;
+    }
+    @supports (scroll-snap-type: y) {
+      scroll-snap-type: Y;
     }
   }
 
-  @media screen and (min-width: map-get($breakpoint, 'tablet')) and (min-height: 1000px) {
-    font-size: 100%;
+  @include media(desktop) {
+    font-size: 85%;
   }
 
+  // Large desktop
   @media screen and (min-width: 1500px) and (min-height: 1000px) {
     font-size: 100%;
   }
