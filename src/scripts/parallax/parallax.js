@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
   window.addEventListener('scroll', parallaxThrottle);
 
   function parallaxSequence() {
-    console.log('trying');
     if (isInViewport(hero)) {
       window.requestAnimationFrame(heroParallax);
     }

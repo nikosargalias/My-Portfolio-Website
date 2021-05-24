@@ -2,10 +2,22 @@
   &--right {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translateX(100vw) !important;
+
+    &:active,
+    &:hover {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translateX(100vw) !important;
+    }
   }
 
   &--left {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translateX(-100vw);
+
+    &:active,
+    &:hover {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translateX(-100vw);
+    }
   }
 }

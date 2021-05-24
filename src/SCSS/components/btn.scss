@@ -10,6 +10,8 @@
   background: $dark-background;
   color: white;
   transition: all 0.2s;
+  -webkit-appearance: none;
+  opacity: 1;
 
   @include media(tablet) {
     &--big {
