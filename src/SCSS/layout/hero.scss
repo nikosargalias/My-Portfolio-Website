@@ -57,9 +57,9 @@
     border-right: 1px solid white;
   }
 
-  &__btn {
-    @include transition(long);
-  }
+  // &__btn {
+  //   @include transition(long);
+  // }
 
   &__content {
     @include container;

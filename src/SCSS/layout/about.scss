@@ -3,12 +3,10 @@
 
 .about {
   @extend %section;
-  padding: 3rem 0 2rem;
-  overflow: hidden;
+  padding: 2rem 0 2rem;
 
   &__parallax {
     z-index: 1;
-    overflow: hidden;
 
     & img {
       will-change: opacity, transform;

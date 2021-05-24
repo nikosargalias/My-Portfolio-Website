@@ -23,9 +23,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
   window.addEventListener('scroll', parallaxThrottle);
 
   function parallaxSequence() {
-    if (isInViewport(hero)) {
-      window.requestAnimationFrame(heroParallax);
-    }
+    // if (isInViewport(hero)) {
+    //   window.requestAnimationFrame(heroParallax);
+    // }
 
     if (isInViewport(portfolioSection)) {
       window.requestAnimationFrame(portfolioParallax);

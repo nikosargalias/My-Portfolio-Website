@@ -7,9 +7,10 @@
   text-decoration: none;
   padding: 1rem 2rem;
   border-radius: 30px;
+  // background: rgba(117, 117, 117, 0.2);
   background: $dark-background;
   color: white;
-  transition: all 0.2s;
+  @include transition(short);
   -webkit-appearance: none;
   opacity: 1;
 
@@ -17,6 +18,11 @@
     &--big {
       font-size: 2rem;
     }
+  }
+
+  &--contact {
+    box-shadow: $shadow-light;
+    border: 1px solid rgba(255, 255, 255, 0.348);
   }
 
   &--small {
