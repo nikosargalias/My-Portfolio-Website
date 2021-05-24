@@ -2,9 +2,6 @@ import throttle from '../performance/throttle';
 
 window.addEventListener('DOMContentLoaded', (event) => {
   // Hero Images
-  const imgOne = document.getElementById('para-img-1');
-  const imgTwo = document.getElementById('para-img-2');
-  const imgThree = document.getElementById('para-img-3');
   const heroContent = document.getElementById('hero__content');
   const hero__btn = document.getElementById('hero__btn');
   const hero = document.getElementById('hero');
@@ -12,8 +9,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
   //   Portfolio Images & section
   const stormTrooper = document.getElementById('storm-trooper-one');
   const stormTrooper2 = document.getElementById('storm-trooper-two');
-  const stormTrooper3 = document.getElementById('storm-trooper-three');
-  const stormTrooper4 = document.getElementById('storm-trooper-four');
   const portfolioSection = document.getElementById('portfolio');
 
   // About images
@@ -91,9 +86,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     if (window.scrollY < hero.clientHeight) {
       stormTrooper.classList.add('parallax-movement--left');
-      stormTrooper2.classList.add('parallax-movement--left');
-      stormTrooper3.classList.add('parallax-movement--right');
-      stormTrooper4.classList.add('parallax-movement--right');
+      stormTrooper2.classList.add('parallax-movement--right');
     }
 
     if (heightPercent >= -200) {
@@ -105,21 +98,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         'parallax-movement--left',
         'parallax-movement--right'
       );
-      stormTrooper3.classList.remove(
-        'parallax-movement--left',
-        'parallax-movement--right'
-      );
-      stormTrooper4.classList.remove(
-        'parallax-movement--left',
-        'parallax-movement--right'
-      );
     }
 
     if (heightPercent >= 200) {
       stormTrooper.classList.add('parallax-movement--right');
-      stormTrooper2.classList.add('parallax-movement--right');
-      stormTrooper3.classList.add('parallax-movement--left');
-      stormTrooper4.classList.add('parallax-movement--left');
+      stormTrooper2.classList.add('parallax-movement--left');
     }
   }
 
