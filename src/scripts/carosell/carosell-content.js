@@ -4,17 +4,6 @@ cardContentDiv.innerHTML = `
                     <article id="card-0" class="portfolio-section__box card__box">
                         <span></span>
                             <div class="card__content">
-                                <h2 class="card__title">This Website!</h2>
-                                <p class="card__body body">This website uses component based Javascript architecture for many features such as hide nav-background on mobile when scrolling down, parallax images, typewritter effect and advanced throttle and debounce functions for site performance. Additionally, I'm using BEM, component based SCSS, and Webpack + Babel proprocessing for distribution bundle.
-                                </p>
-                                <div class="card__links">
-                                    <a class="card__link" target="_blank" href="https://github.com/nikosargalias/My-Portfolio-Website">Github</a>
-                                </div>
-                            </div>
-                    </article>
-                    <article id="card-1" class="portfolio-section__box card__box">
-                        <span></span>
-                            <div class="card__content">
                                 <h2 class="card__title">Soundflow Music Academy</h2>
                                 <p class="card__body body">An online learning platform similar to Udemy/Brilliant with tutor friendly content upload, content lock, multiple membership levels and course progression tracking
                                 </p>
@@ -23,6 +12,18 @@ cardContentDiv.innerHTML = `
                                 </div>
                             </div>
                     </article>
+                    <article id="card-1" class="portfolio-section__box card__box">
+                        <span></span>
+                            <div class="card__content">
+                                <h2 class="card__title">This Website!</h2>
+                                <p class="card__body body">This website uses component based Javascript architecture for many features such as hide nav-background on mobile when scrolling down, parallax images, typewritter effect and advanced throttle and debounce functions for site performance. Additionally, I'm using BEM, component based SCSS, and Webpack + Babel proprocessing for distribution bundle.
+                                </p>
+                                <div class="card__links">
+                                    <a class="card__link" target="_blank" href="https://github.com/nikosargalias/My-Portfolio-Website">Github</a>
+                                </div>
+                            </div>
+                    </article>
+                    
                     <article id="card-2" class="portfolio-section__box card__box">
                         <span></span>
                             <div class="card__content">
