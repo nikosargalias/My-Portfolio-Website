@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     return false;
   }
 
-  let lastScrollTop = 0;
+  let lastScrollTop = window.scrollY;
 
   function isScrollDown() {
     if (lastScrollTop < window.scrollY) {
@@ -69,7 +69,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         'parallax-movement--right',
         'parallax-movement--left'
       );
-    } else if (isScrollDown) {
+    } else if (isScrollDown()) {
       heroContent.classList.add('parallax-movement--right');
       hero__btn.classList.add('parallax-movement--left');
     }
@@ -111,12 +111,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
       ((window.scrollY - hero.clientHeight * 2) / aboutSection.offsetHeight) *
       aboutSection.offsetWidth;
 
-    if (widthPercent < -200) {
+    if (widthPercent < -300) {
       rebel1.classList.add('parallax-movement--left');
       rebel2.classList.add('parallax-movement--right');
     }
 
-    if (widthPercent > -200) {
+    if (widthPercent > -300) {
       rebel1.classList.remove(
         'parallax-movement--right',
         'parallax-movement--left'
@@ -127,7 +127,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       );
     }
 
-    if (widthPercent > aboutSection.clientHeight / 6) {
+    if (widthPercent > aboutSection.clientHeight / 5) {
       rebel1.classList.add('parallax-movement--right');
       rebel2.classList.add('parallax-movement--left');
     }
