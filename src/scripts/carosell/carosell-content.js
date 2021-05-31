@@ -56,6 +56,19 @@ cardContentDiv.innerHTML = `
                     <article id="card-4" class="portfolio-section__box card__box">
                         <span></span>
                         <div class="card__content">
+                            <h2 class="card__title">Guessing Game</h2>
+                            <p class="card__body body">
+                            Not just any light guessing game. This features multiple validation function to check if your guess is too high / too low / whether the game has started and more. It also features dynamically changing themes, and usage of local storage to store your high score. Built using MVC architecture and component based BEM SCSS. 
+                            </p>
+                            <div class="card__links">
+                                <a class="card__link" target="_blank"  href="https://github.com/nikosargalias/guess-number">Github</a>
+                                <a class="card__link" target="_blank" href="https://heuristic-hamilton-6c881a.netlify.app/">Website</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article id="card-5" class="portfolio-section__box card__box">
+                        <span></span>
+                        <div class="card__content">
                             <h2 class="card__title">Hangman++</h2>
                             <p class="card__body body">
                             word guessing game with a custom integration of user accounts allowing you to create multiple user accounts (using secure hashed password encryption), which save your game progress to local storage.
@@ -66,7 +79,7 @@ cardContentDiv.innerHTML = `
                             </div>
                         </div>
                     </article>
-                    <article id="card-5" class="portfolio-section__box card__box">
+                    <article id="card-6" class="portfolio-section__box card__box">
                         <span></span>
                         <div class="card__content">
                             <h2 class="card__title">AirBnB Style</h2>
@@ -79,7 +92,7 @@ cardContentDiv.innerHTML = `
                             </div>
                         </div>
                     </article>
-                    <article id="card-6" class="portfolio-section__box card__box">
+                    <article id="card-7" class="portfolio-section__box card__box">
                         <span></span>
                         <div class="card__content">
                             <h2 class="card__title">Natours</h2>
@@ -92,7 +105,7 @@ cardContentDiv.innerHTML = `
                             </div>
                         </div>
                     </article>
-                    <article id="card-7" class="portfolio-section__box card__box">
+                    <article id="card-8" class="portfolio-section__box card__box">
                         <span></span>
                         <div class="card__content">
                             <h2 class="card__title">Tidy Todo</h2>
