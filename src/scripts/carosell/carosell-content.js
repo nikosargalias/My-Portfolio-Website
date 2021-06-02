@@ -69,13 +69,13 @@ cardContentDiv.innerHTML = `
                     <article id="card-5" class="portfolio-section__box card__box">
                         <span></span>
                         <div class="card__content">
-                            <h2 class="card__title">Hangman++</h2>
+                            <h2 class="card__title">Pig Game</h2>
                             <p class="card__body body">
-                            word guessing game with a custom integration of user accounts allowing you to create multiple user accounts (using secure hashed password encryption), which save your game progress to local storage.
+                                The famous Pig Game, however with a beautiful design responsive to any device (landscape or portrait). Using BEM, and component based SCSS. Using Webpack and babel for compatibility with old browsers and MVC JS architecture. 
                             </p>
                             <div class="card__links">
-                                <a class="card__link" target="_blank"  href="https://github.com/nikosargalias/Hangman">Github</a>
-                                <a class="card__link" target="_blank" href="https://inspiring-cray-30a441.netlify.app/">Website</a>
+                                <a class="card__link" target="_blank"  href="https://github.com/nikosargalias/Pig-Game">Github</a>
+                                <a class="card__link" target="_blank"  href="https://vigilant-edison-6cb8c6.netlify.app/">Website</a>
                             </div>
                         </div>
                     </article>
@@ -113,8 +113,21 @@ cardContentDiv.innerHTML = `
                                 A todo & note taking aplication the ability to: sort, add, delete, filter and edit lists. This was a Javascript heavy project with very little focus on design. Utilising functional prgramming techniques, MVC architecture and webpack for bundle optimisation. 
                             </p>
                             <div class="card__links">
-                                <a class="card__link" target="_blank"  href="https://github.com/nikosargalias/Tidy-Todo">Github</a>
+                                <a class="card__link" target="_blank"  href="https://github.com/nikosargalias/Tidy-Todo">Website</a>
                                 <a class="card__link" target="_blank"  href="https://competent-visvesvaraya-98b0aa.netlify.app/">Github</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article id="card-9" class="portfolio-section__box card__box">
+                        <span></span>
+                        <div class="card__content">
+                            <h2 class="card__title">Hangman++</h2>
+                            <p class="card__body body">
+                            A word guessing game with a custom integration of user accounts allowing you to create multiple user accounts (using secure hashed password encryption), which save your game progress to local storage.
+                            </p>
+                            <div class="card__links">
+                                <a class="card__link" target="_blank"  href="https://github.com/nikosargalias/Hangman">Github</a>
+                                <a class="card__link" target="_blank" href="https://inspiring-cray-30a441.netlify.app/">Website</a>
                             </div>
                         </div>
                     </article>
