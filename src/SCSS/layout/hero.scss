@@ -3,6 +3,11 @@
 
 .hero {
   @extend %section;
+  padding: 0;
+
+  @media (max-height: map-get($height, 'mobile')) {
+    padding: 8rem 0;
+  }
   // justify-content: space-evenly;
 
   &__parallax {

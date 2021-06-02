@@ -1,4 +1,4 @@
-import { mobile } from '../media-queries/media-queries';
+import { tablet } from '../media-queries/media-queries';
 import throttle from '../performance/throttle';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function togglehHeaderBackground() {
     const scrolledDown = window.scrollY > lastSCrollPosition;
 
-    if (mobile.matches) {
+    if (!tablet.matches) {
       if (scrolledDown) {
         header.style.background = 'transparent';
       } else {
@@ -30,8 +30,13 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function largeWindowHeaderBackground() {
-    if (!mobile.matches) {
+    if (tablet.matches) {
       header.style.background = 'rgba(0, 0, 0, 0.712)';
     }
   }
+  // function largeWindowHeaderBackground() {
+  //   if (!mobile.matches) {
+  //     header.style.background = 'rgba(0, 0, 0, 0.712)';
+  //   }
+  // }
 });

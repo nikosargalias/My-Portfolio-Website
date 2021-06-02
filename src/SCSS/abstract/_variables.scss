@@ -2,7 +2,13 @@
 
 $breakpoint: (
   'mobile': 500px,
-  'tablet': 768px,
+  'tablet': 900px,
+  'desktop': 1260px,
+);
+
+$height: (
+  'mobile': 500px,
+  'tablet': 500px,
   'desktop': 1260px,
 );
 

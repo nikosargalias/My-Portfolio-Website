@@ -2,7 +2,7 @@
 
 @mixin media($device) {
   $size: map-get($breakpoint, $device);
-  @media (min-width: $size) {
+  @media (min-width: $size) and (min-height: map-get($height, $device)) {
     @content;
   }
 }

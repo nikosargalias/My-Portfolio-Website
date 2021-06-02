@@ -50,13 +50,17 @@
 
   &__container {
     @include container;
-    width: 900px;
+    width: 500px;
     max-width: 95vw;
     border-radius: 30px;
     @include flex(row);
     justify-content: center;
     align-items: center;
     position: relative;
+
+    @include media(tablet) {
+      width: 850px;
+    }
   }
 
   &__subtitle {
