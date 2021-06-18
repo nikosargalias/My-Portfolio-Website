@@ -52,12 +52,10 @@
   &__link {
     display: inline-block;
     text-decoration: none;
-    color: $font-color;
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
     padding-bottom: 10px;
-    // border-bottom: solid rgba(255, 255, 255, 0.372) 1px;
     border-bottom: solid rgba($accent-color, 0.5) 1px;
     margin-bottom: 1rem;
     // @extend %rainbow-text;
@@ -65,12 +63,7 @@
 
     &:hover {
       text-decoration: none;
-      // border-bottom: solid rgba(255, 255, 255, 1) 1px;
     }
-
-    // &:focus {
-
-    // }
   }
 
   &__burger-btn {

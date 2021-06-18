@@ -55,12 +55,12 @@ a {
   &:active,
   &:visited,
   &:focus {
-    color: rgb(84, 158, 176);
+    color: rgba(84, 158, 176, 0.9);
   }
 
   &:hover {
     text-decoration: underline;
     opacity: 0.8;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
