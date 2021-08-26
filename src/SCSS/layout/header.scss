@@ -133,5 +133,8 @@
 }
 
 .hidden {
-  display: none !important;
+  display: none;
+  @include media(tablet) {
+    display: block;
+  }
 }
