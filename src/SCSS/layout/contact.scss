@@ -4,6 +4,10 @@
   @extend %section;
   padding: 2rem 0 5rem;
 
+  div {
+    transition: all 0.5s;
+  }
+
   @include media(tablet) {
     padding: 4rem 0 3rem;
   }

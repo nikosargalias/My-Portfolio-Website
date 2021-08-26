@@ -20,17 +20,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
     rotateBurgerLines();
   }
 
-  function slideInMenu() {
-    const { navMenu, listItems, menu } = publicEls;
-    navMenu.classList.toggle('menu__open');
-    // menu.classList.toggle('menu__height');
-    listItems.forEach((item, i) => {
-      item.classList.toggle('menu__open');
-    });
-  }
+  const slideInMenu = (function () {
+    let state = false;
+
+    return function () {
+      const { navMenu, listItems, menu } = publicEls;
+
+      if (!state) {
+        navMenu.classList.remove('hidden');
+      }
+
+      setTimeout(() => {
+        navMenu.classList.toggle('menu__open');
+        // menu.classList.toggle('menu__height');
+        listItems.forEach((item, i) => {
+          item.classList.toggle('menu__open');
+        });
+
+        setTimeout(() => {
+          if (state) {
+            navMenu.classList.add('hidden');
+          }
+          state = !state;
+        }, 500);
+      }, 0);
+    };
+  })();
 
   function rotateBurgerLines() {
     publicEls.burgerBtn.classList.toggle('menu__burger-btn--clicked');
   }
-  
 });

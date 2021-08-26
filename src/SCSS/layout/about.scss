@@ -5,6 +5,10 @@
   @extend %section;
   padding: 2rem 0 2rem;
 
+  div {
+    transition: all 0.5s;
+  }
+
   &__parallax {
     z-index: 1;
 

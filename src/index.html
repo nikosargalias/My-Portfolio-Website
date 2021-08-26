@@ -15,10 +15,14 @@
   <body class="page">
     <header id="header" class="header">
       <div id="menu" class="header__container menu">
-        <div id="menu__burger-btn" class="menu__burger-btn">
+        <button
+          aria-label="navigation menu toggle button"
+          id="menu__burger-btn"
+          class="menu__burger-btn"
+        >
           <div class="menu__burger-line"></div>
-        </div>
-        <nav id="menu__nav" class="menu__nav">
+        </button>
+        <nav id="menu__nav" class="menu__nav hidden">
           <ul id="menu__list" class="menu__list">
             <li class="menu__item">
               <a tabindex="0" href="#hero" class="menu__link">Home</a>

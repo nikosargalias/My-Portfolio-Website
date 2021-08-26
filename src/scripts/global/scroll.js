@@ -34,9 +34,4 @@ window.addEventListener('DOMContentLoaded', () => {
       header.style.background = 'rgba(0, 0, 0, 0.712)';
     }
   }
-  // function largeWindowHeaderBackground() {
-  //   if (!mobile.matches) {
-  //     header.style.background = 'rgba(0, 0, 0, 0.712)';
-  //   }
-  // }
 });
