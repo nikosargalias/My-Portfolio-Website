@@ -11,8 +11,8 @@ import '../main.scss';
 // import './carosell/carosell-improved';
 
 import './menu/menu';
+import './parallax/parallax-performant';
 // import './parallax/parallax';
-import './parallax/parallax';
 import './carosell/carosell';
 import './global/scroll';
 import './typewritter/typewritter';

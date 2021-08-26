@@ -8,7 +8,6 @@
   @media (max-height: map-get($height, 'mobile')) {
     padding: 8rem 0;
   }
-  // justify-content: space-evenly;
 
   &__parallax {
     overflow: hidden;
@@ -25,19 +24,7 @@
       overflow: hidden;
       z-index: 1;
       @include transition('long');
-
-      // &:first-child {
-      //   z-index: 1;
-      // }
-      // &:nth-child(2) {
-      //   z-index: 2;
-      // }
-      // &:nth-child(3) {
-      //   z-index: 3;
-      // }
     }
-
-    // @extend %yoda;
   }
 
   &__title {

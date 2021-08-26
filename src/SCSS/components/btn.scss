@@ -10,7 +10,7 @@
   // background: rgba(117, 117, 117, 0.2);
   background: $dark-background;
   color: white;
-  @include transition(short);
+  @include transition(long);
   -webkit-appearance: none;
   opacity: 1;
 
