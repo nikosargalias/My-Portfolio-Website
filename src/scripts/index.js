@@ -15,3 +15,4 @@ import './parallax/parallax';
 import './carosell/carosell';
 import './global/scroll';
 import './typewritter/typewritter';
+import './global/linkScroll';
