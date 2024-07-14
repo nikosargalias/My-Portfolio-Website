@@ -1,4 +1,5 @@
-@use '../abstract/forwards' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
 
 .btn {
   font-size: 1.2rem;

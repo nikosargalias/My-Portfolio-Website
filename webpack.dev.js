@@ -14,12 +14,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.scss$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-          'glob-import-loader',
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
         exclude: /\.png$/i,
       },
       {

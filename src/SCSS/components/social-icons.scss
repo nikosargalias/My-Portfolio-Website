@@ -1,4 +1,6 @@
 @use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
 .social-icons {
   &__link {
     font-size: 0.6rem;

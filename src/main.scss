@@ -1,3 +1,29 @@
+@use './SCSS/abstract/variables' as *;
+@use './SCSS/abstract/functions' as *;
+@use './SCSS/abstract/mixins' as *;
+@use './SCSS/abstract/placeholders' as *;
+@use './SCSS/abstract/animations' as *;
+@use './SCSS/abstract/yoda-dark-bg' as *;
+@use './SCSS/abstract/parallax' as *;
+
+@use './SCSS/base/global' as *;
+
+@use './SCSS/base/img.scss' as *;
+@use './SCSS/base/scroll-snap.scss' as *;
+@use './SCSS/base/typography.scss' as *;
+@use './SCSS/base/utilities.scss' as *;
+@use './SCSS/components/btn' as *;
+@use './SCSS/components/cards' as *;
+@use './SCSS/components/carosel-btn' as *;
+@use './SCSS/components/social-icons' as *;
+@use './SCSS/layout/contact' as *;
+@use './SCSS/layout/about' as *;
+@use './SCSS/layout/footer' as *;
+@use './SCSS/layout/header' as *;
+@use './SCSS/layout/hero' as *;
+@use './SCSS/layout/page' as *;
+@use './SCSS/layout/portfolio' as *;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 // @import './SCSS/abstract/_variables.scss';
 // @import './SCSS/base/global.scss';
 // @import './SCSS/layout/footer.scss';
@@ -5,5 +31,5 @@
 // @import './SCSS/layout/hero.scss';
 // @import './SCSS/layout/menu.scss';
 // @import './SCSS/layout/page.scss';
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
-@import './SCSS/**/*.scss';
+// @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+// @import './SCSS/**/*.scss';

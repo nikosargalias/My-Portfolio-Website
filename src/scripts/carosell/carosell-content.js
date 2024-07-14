@@ -135,7 +135,7 @@ cardContentDiv.innerHTML = `
 
 const cards = (() => {
   const newArr = [];
-  cardContentDiv.children.forEach((e, i) => {
+  Array.from(cardContentDiv.children).forEach((e, i) => {
     newArr.push(e);
   });
   return newArr;
